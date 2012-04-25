@@ -1,0 +1,10 @@
+@(jobs: List[BuildMonitorJob])
+    @for(job <- jobs){
+            <div class="job @job.getColour()">
+                <a class="title" href="@job.getUrl()" >@job.getName()</a>
+                <p> Latest build is:<a href="@job.getLatestBuildUrl()">@job.getLatestBuildNumber()</a></p>
+                @if(job.inProgress()){
+                   <p>In Progress</p>
+                }
+            </div>
+    }
