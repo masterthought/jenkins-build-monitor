@@ -1,7 +1,14 @@
-@(jobs: List[BuildMonitorJob])
+@(jobs: List[BuildJobUtils.BuildMonitorJob])
+
+ <script type="text/javascript">
+    $(document).ready(function(){
+          var shortable = new glow.widgets.Sortable('#content');
+});
+    </script>
+
     @for(job <- jobs){
             <div class="job @job.getColour()">
-                <a class="title" href="@job.getUrl()" >@job.getName()</a>
+                <strong><a class="title" href="@job.getUrl()" >@job.getName()</a></strong>
                           - Latest build is: <a href="@job.getLatestBuildUrl()">#@job.getLatestBuildNumber()</a>
                 @if(job.inProgress()){
                    <img src="@routes.Assets.at("images/progress.gif")" />

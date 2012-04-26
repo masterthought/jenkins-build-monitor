@@ -1,4 +1,4 @@
-package common;
+package BuildJobUtils;
 
 import com.google.gson.Gson;
 
@@ -9,11 +9,6 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Java client to access Hudson remote API.
- *
- * @author Kostas Mamalis
- */
 public class JsonResolver {
 
     public static void parse() throws Exception{
@@ -104,20 +99,3 @@ class BuildServerInfo{
 
 }
 
-class BuildJob{
-    public String name;
-    public String url;
-    public String color;
-}
-
-class BuildJobVerbose{
-    public String name;
-    public String color;
-    public Build lastCompletedBuild;
-    public List<Build> builds;
-}
-
-class Build{
-    public String number;
-    public String url;
-}

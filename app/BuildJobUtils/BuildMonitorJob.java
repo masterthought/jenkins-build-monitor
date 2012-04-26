@@ -1,12 +1,5 @@
-package common;
+package BuildJobUtils;
 
-/**
- * Created by IntelliJ IDEA.
- * User: kostasmamalis
- * Date: 23/04/2012
- * Time: 15:49
- * To change this template use File | Settings | File Templates.
- */
 public class BuildMonitorJob {
 
     private BuildStatus status;
@@ -19,7 +12,6 @@ public class BuildMonitorJob {
         this.buildJob = buildJob;
         this.active = true;
         setVerbose();
-
     }
 
     public boolean inProgress(){

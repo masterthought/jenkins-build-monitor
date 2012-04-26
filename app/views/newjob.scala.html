@@ -1,0 +1,8 @@
+@(myForm: Form[Job])
+
+@helper.form(action = routes.BuildMonitor.persist()) {
+    
+    @helper.inputText(myForm("name"))
+    <input type="submit" class="btn" value="Create">
+    
+}

@@ -4,13 +4,14 @@
 # --- !Ups
 
 create table job (
-  name                      varchar(255) not null,
+  id                        bigint not null,
+  name                      varchar(255),
   latest_build              varchar(255),
   url                       varchar(255),
   colour                    varchar(255),
   latest_build_url          varchar(255),
   active                    boolean,
-  constraint pk_job primary key (name))
+  constraint pk_job primary key (id))
 ;
 
 create sequence job_seq;
