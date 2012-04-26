@@ -1,4 +1,4 @@
-package controllers;
+package common;
 
 /**
  * Created by IntelliJ IDEA.

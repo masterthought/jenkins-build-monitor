@@ -2,9 +2,9 @@
     @for(job <- jobs){
             <div class="job @job.getColour()">
                 <a class="title" href="@job.getUrl()" >@job.getName()</a>
-                <p> Latest build is:<a href="@job.getLatestBuildUrl()">@job.getLatestBuildNumber()</a></p>
+                          - Latest build is: <a href="@job.getLatestBuildUrl()">#@job.getLatestBuildNumber()</a>
                 @if(job.inProgress()){
-                   <p>In Progress</p>
+                   <img src="@routes.Assets.at("images/progress.gif")" />
                 }
             </div>
     }

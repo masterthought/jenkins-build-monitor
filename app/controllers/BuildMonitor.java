@@ -1,5 +1,7 @@
 package controllers;
 
+import common.BuildMonitorJob;
+import common.BuildMonitorManager;
 import play.mvc.Controller;
 import play.mvc.Result;
 

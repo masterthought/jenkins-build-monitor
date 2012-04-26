@@ -1,4 +1,4 @@
-package controllers;
+package common;
 
 import com.google.gson.Gson;
 

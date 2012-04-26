@@ -1,4 +1,4 @@
-package controllers;
+package common;
 
 import java.util.*;
 
@@ -31,7 +31,8 @@ public class BuildMonitorManager {
 
       public static void refreshAllJobs(){
          try {
-            List<BuildJob> buildJobs = JsonResolver.getAvailableBuildJobs(INSTANCE.getUrl());
+            String url = INSTANCE == null ? "http://localhost:8080" : INSTANCE.getUrl();
+            List<BuildJob> buildJobs = JsonResolver.getAvailableBuildJobs(url);
             existingJobs.clear();
             if(buildJobs != null && buildJobs.size() != 0){
                 for(BuildJob buildJob : buildJobs){
