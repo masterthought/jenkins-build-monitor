@@ -1,6 +1,9 @@
 package BuildJobUtils;
 
-import java.util.*;
+import models.MainUrl;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BuildMonitorManager {
 
@@ -24,15 +27,20 @@ public class BuildMonitorManager {
     private static BuildMonitorManager INSTANCE;
 
     protected BuildMonitorManager(String url){
+        MainUrl mainUrl = new MainUrl();
+        mainUrl.url = url;
+        mainUrl.save();
+        mainUrl.refresh();
         this.url = url;
-        refreshAllJobs();
+        refreshAllJobs(mainUrl);
     }
 
 
-      public static void refreshAllJobs(){
+      public static void refreshAllJobs(MainUrl url){
          try {
-            String url = INSTANCE == null ? "http://localhost:8080" : INSTANCE.getUrl();
-            List<BuildJob> buildJobs = JsonResolver.getAvailableBuildJobs(url);
+             System.out.println("Refreshing for: " + url.url);
+            url.refresh();
+            List<BuildJob> buildJobs = JsonResolver.getAvailableBuildJobs(url.url);
             existingJobs.clear();
             if(buildJobs != null && buildJobs.size() != 0){
                 for(BuildJob buildJob : buildJobs){
@@ -45,8 +53,8 @@ public class BuildMonitorManager {
       }
 
 
-    public List<BuildMonitorJob> getMonitorJobs(){
-        refreshAllJobs();
+    public List<BuildMonitorJob> getMonitorJobs(MainUrl url){
+        refreshAllJobs(url);
         return existingJobs;
     }
 

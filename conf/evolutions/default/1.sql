@@ -14,7 +14,15 @@ create table job (
   constraint pk_job primary key (id))
 ;
 
+create table main_url (
+  id                        bigint not null,
+  url                       varchar(255),
+  constraint pk_main_url primary key (id))
+;
+
 create sequence job_seq;
+
+create sequence main_url_seq;
 
 
 
@@ -25,7 +33,11 @@ SET REFERENTIAL_INTEGRITY FALSE;
 
 drop table if exists job;
 
+drop table if exists main_url;
+
 SET REFERENTIAL_INTEGRITY TRUE;
 
 drop sequence if exists job_seq;
+
+drop sequence if exists main_url_seq;
 

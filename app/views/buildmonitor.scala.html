@@ -11,7 +11,8 @@
                 <strong><a class="title" href="@job.getUrl()" >@job.getName()</a></strong>
                           - Latest build is: <a href="@job.getLatestBuildUrl()">#@job.getLatestBuildNumber()</a>
                 @if(job.inProgress()){
-                   <img src="@routes.Assets.at("images/progress.gif")" />
+                   <!--img src="@routes.Assets.at("images/progress.gif")" /-->
+                            <i><strong>BUILD IN PROGRESS</strong></i>
                 }
             </div>
     }
