@@ -5,7 +5,7 @@ import PlayProject._
 object ApplicationBuild extends Build {
 
     val appName         = "buildmonitor"
-    val appVersion      = "1.0-SNAPSHOT"
+    val appVersion      = "1.1"
 
     val appDependencies = Seq(
      "org.scala-tools" %% "scala-stm" % "0.3",

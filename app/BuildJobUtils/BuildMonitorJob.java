@@ -35,7 +35,7 @@ public class BuildMonitorJob {
     }
 
     public String getLatestBuildNumber(){
-       return verbose.builds.size() != 0 ? verbose.builds.get(0).number : "<not available>";
+       return verbose.builds.size() != 0 ? verbose.builds.get(0).number : "N/A";
     }
 
     private BuildJobVerbose verbose;

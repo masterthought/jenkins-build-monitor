@@ -3,9 +3,7 @@ package BuildJobUtils;
 import models.MainUrl;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class BuildMonitorManager {
 
@@ -44,13 +42,16 @@ public class BuildMonitorManager {
             url.refresh();
             List<BuildJob> buildJobs = JsonResolver.getAvailableBuildJobs(url.url);
             existingJobs.clear();
-            colourStatistics.clear();
-            int total = buildJobs.size();
             int red = 0;
             int blue = 0;
             int green = 0;
+            backgroundColor = "grey";
             if(buildJobs != null && buildJobs.size() != 0){
                 for(BuildJob buildJob : buildJobs){
+                    if(buildJob.name.length()>25){
+                        String name = buildJob.name.substring(0,22)+"...";
+                        buildJob.name = name;
+                    }
                     existingJobs.add(new BuildMonitorJob(buildJob));
                     if(buildJob.color.equals("blue")) blue++;
                     if(buildJob.color.equals("red")) red++;
@@ -59,25 +60,24 @@ public class BuildMonitorManager {
                 System.out.println("Blue builds: " + blue);
                 System.out.println("Red builds: " + red);
                 System.out.println("Yellow builds: " + green);
-                colourStatistics.put("red", Math.round(red*255/total));
-                colourStatistics.put("blue", Math.round(blue*255/total));
-                colourStatistics.put("green", Math.round(green*255/total));
+
             }
-            else  {
-                colourStatistics.put("red", 0);
-                colourStatistics.put("blue", 0);
-                colourStatistics.put("green", 0);
-            }
-            System.out.println(getBackgroundColour());
+
+            if(buildJobs.size() == 0 ) backgroundColor = "grey";
+            else if(blue == buildJobs.size())  backgroundColor = "blue";
+            else if (red > 0 ) backgroundColor = "red";
+            else if(green > 0 ) backgroundColor = "purple";
+
+             System.out.println(getBackgroundColour());
         } catch (Exception e) {
             e.printStackTrace();
         }
       }
 
-    public static Map<String,Integer> colourStatistics = new HashMap<String,Integer>();
+    public static String backgroundColor;
 
     public static String getBackgroundColour(){
-        return "rgb(" + colourStatistics.get("red") + "," + colourStatistics.get("green") + "," + colourStatistics.get("blue")+")";
+        return backgroundColor;
     }
 
     public List<BuildMonitorJob> getMonitorJobs(MainUrl url){
