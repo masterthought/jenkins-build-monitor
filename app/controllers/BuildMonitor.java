@@ -29,12 +29,15 @@ public class BuildMonitor extends Controller {
           url.refresh();
       }
 
-      return ok(views.html.index.render(url.url,alljobs));
+      String backgroundColour = BuildMonitorManager.getBackgroundColour();
+
+      return ok(views.html.index.render(backgroundColour, url.url,alljobs));
   }
   
   public static Result buildmonitor() {
         List<BuildMonitorJob> jobs = getAllJobs();
-      return ok(views.html.buildmonitor.render(jobs));
+      String backgroundColour = BuildMonitorManager.getBackgroundColour();
+      return ok(views.html.buildmonitor.render(backgroundColour, jobs));
   }
 
   public static List<BuildMonitorJob> getAllJobs(){

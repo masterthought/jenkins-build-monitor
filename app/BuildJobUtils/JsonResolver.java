@@ -3,6 +3,7 @@ package BuildJobUtils;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -73,6 +74,9 @@ public class JsonResolver {
        }
        } catch(MalformedURLException me){
           System.out.println("Wrong URL");
+           return new StringBuffer("");
+       } catch (IOException io){
+           System.out.println("URL doesn't have any api json. Please reconfigure");
            return new StringBuffer("");
        }
 

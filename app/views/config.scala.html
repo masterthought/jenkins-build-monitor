@@ -11,6 +11,7 @@
 
       #config{
           margin-top: 180px;
+          width: 50%;
       }
 
     header {
@@ -37,10 +38,6 @@ dd {
 }
 dt {
  float:left;
- width:5%;
- overflow: hidden;
- margin: 0;
- padding: 0;
 }
 .info {
     display: none;
@@ -49,6 +46,16 @@ dt {
  overflow: hidden;
  margin: 0;
  padding: 0;
+}
+
+#fields {
+    float: left;
+    width: 70%;
+}
+
+#button {
+    float: right;
+    width: 20%;
 }
 </style>
         <header>
@@ -60,10 +67,12 @@ dt {
 <body>
 <div id="config">
 @helper.form(action = routes.BuildConfig.persist()) {
-    
+    <div id="fields">
     @helper.inputText(myForm("url"))
+        </div>
+    <div id="button">
     <input type="submit" class="btn" value="Change Configuration">
-
+    </div>
 }
 </div>
 </body>

@@ -1,4 +1,4 @@
-@(jobs: List[BuildJobUtils.BuildMonitorJob])
+@(backgroundColour : String, jobs: List[BuildJobUtils.BuildMonitorJob])
 
  <script type="text/javascript">
     $(document).ready(function(){
@@ -6,13 +6,20 @@
 });
     </script>
 
+        <style type="text/css">
+            body {
+	    color: white;
+	    background-color: @backgroundColour }
+        </style>
+
     @for(job <- jobs){
             <div class="job @job.getColour()">
-                <strong><a class="title" href="@job.getUrl()" >@job.getName()</a></strong>
-                          - Latest build is: <a href="@job.getLatestBuildUrl()">#@job.getLatestBuildNumber()</a>
+                <strong><a class="title" href="@job.getUrl()" >@job.getName()</a>
+                          - Build: <a href="@job.getLatestBuildUrl()">#@job.getLatestBuildNumber()</a>
                 @if(job.inProgress()){
                    <!--img src="@routes.Assets.at("images/progress.gif")" /-->
-                            <i><strong>BUILD IN PROGRESS</strong></i>
+                            <i>BUILD IN PROGRESS</i>
                 }
+                    </strong>
             </div>
     }

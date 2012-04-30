@@ -1,4 +1,4 @@
-@(url: String, alljobs : List[BuildJobUtils.BuildMonitorJob])
+@(background: String , url: String, alljobs : List[BuildJobUtils.BuildMonitorJob])
 <html>
 <head>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
@@ -12,9 +12,7 @@
 </head>
 <body>
 <style type="text/css">
-	  body {
-	    color: white;
-	    background-color: #2E2E2E }
+
       a {
           color: white;
       }
@@ -34,14 +32,16 @@
 			border-radius: 10px;
 			font-size:20px;
 			font-family:verdana;
-			width:900px;
+			width:80%;
+            margin-left:auto;
+            margin-right:auto;
 			padding:10px;
 			margin:5px;
 		   }
 
          #content {
              overflow: hidden;
-             width:1100px;
+             width:100%;
              margin-top:90px;
          }
          #content .glow-sortable-dropindicator {
@@ -61,7 +61,6 @@
 		color:white;
 		font-size:20px;
 		font-family:verdana;
-		width:600px;
 		padding:10px;
 		margin:5px;
 	   }
@@ -72,7 +71,6 @@
 		color:#FF4000;
 		font-size:20px;
 		font-family:verdana;
-		width:600px;
 		padding:10px;
 		margin:5px;
       }
@@ -87,7 +85,6 @@
 		color:#58ACFA;
 		font-size:20px;
 		font-family:verdana;
-		width:600px;
 		padding:10px;
 		margin:5px;
       }
@@ -101,7 +98,6 @@
 		color:white;
 		font-size:20px;
 		font-family:verdana;
-		width:600px;
 		padding:10px;
 		margin:5px;
 	   }
@@ -135,16 +131,27 @@
 
     header img {
         margin-top: -50px;
+        float:left;
+    }
+
+    #config {
+        float:right;
+        font-family: verdana;
+        color: #58ACFA;
+    }
+
+    #config a {
+        font-family: verdana;
+        color: #58ACFA;
     }
 
 	  </style>
 <header>
-   <img src="@routes.Assets.at("images/build_monitor_logo.png")" />  <strong style="font-size: 16px; font-family: verdana; font-style: italic;">for <a href="@url">@url</a></strong>
-    <a href="/config" style="font-size: 12px">(Config)</a>
-<!-- in the future we will put the configuration here! -->
+   <img src="@routes.Assets.at("images/build_monitor_logo.png")" />
+    <div id="config"><strong>For <a href="@url">URL</a> - <a href="/config" style="font-size: 12px">(Config)</a> </strong></div>
 </header>
 <div id="content">
-@buildmonitor(jobs = alljobs)
+@buildmonitor(backgroundColour = background, jobs = alljobs)
 </div>
 <div id="footer">
 </div>
