@@ -11,9 +11,9 @@
 	    color: white;
 	    background-color: @backgroundColour }
         </style>
-
+     <div id="list" class="row">
     @for(job <- jobs){
-            <div class="job @job.getColour()">
+            <div class="grid_12 job @job.getColour()">
                 <strong><a class="title" href="@job.getUrl()" >@job.getName()</a>
                           - Build: <a href="@job.getLatestBuildUrl()">#@job.getLatestBuildNumber()</a>
                 @if(job.inProgress()){
@@ -23,3 +23,4 @@
                     </strong>
             </div>
     }
+    </div>

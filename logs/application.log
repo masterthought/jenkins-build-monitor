@@ -4872,3 +4872,417 @@ database [default] connected at jdbc:h2:mem:play
 2012-04-30 12:04:31,609 - [INFO] - from play in play-akka.actor.default-dispatcher-61 
 Application started (Dev)
 
+2012-04-30 12:39:01,593 - [INFO] - from play in play-akka.actor.default-dispatcher-66 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:39:01,598 - [INFO] - from play in play-akka.actor.default-dispatcher-66 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:39:02,493 - [INFO] - from play in play-akka.actor.default-dispatcher-66 
+Application started (Dev)
+
+2012-04-30 12:40:20,752 - [INFO] - from play in play-akka.actor.default-dispatcher-67 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:40:20,756 - [INFO] - from play in play-akka.actor.default-dispatcher-67 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:40:21,350 - [INFO] - from play in play-akka.actor.default-dispatcher-67 
+Application started (Dev)
+
+2012-04-30 12:41:30,570 - [INFO] - from play in play-akka.actor.default-dispatcher-69 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:41:30,571 - [INFO] - from play in play-akka.actor.default-dispatcher-69 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:41:31,237 - [INFO] - from play in play-akka.actor.default-dispatcher-69 
+Application started (Dev)
+
+2012-04-30 12:43:01,113 - [INFO] - from play in play-akka.actor.default-dispatcher-71 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:43:01,115 - [INFO] - from play in play-akka.actor.default-dispatcher-71 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:43:01,746 - [INFO] - from play in play-akka.actor.default-dispatcher-71 
+Application started (Dev)
+
+2012-04-30 12:48:16,465 - [INFO] - from play in play-akka.actor.default-dispatcher-75 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:48:16,467 - [INFO] - from play in play-akka.actor.default-dispatcher-75 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:48:17,480 - [INFO] - from play in play-akka.actor.default-dispatcher-75 
+Application started (Dev)
+
+2012-04-30 12:48:49,204 - [INFO] - from play in play-akka.actor.default-dispatcher-78 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:48:49,210 - [INFO] - from play in play-akka.actor.default-dispatcher-78 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:48:49,826 - [INFO] - from play in play-akka.actor.default-dispatcher-78 
+Application started (Dev)
+
+2012-04-30 12:50:44,867 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:50:44,869 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:50:45,455 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:51:06,559 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:51:06,561 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:51:07,170 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:51:31,462 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:51:31,464 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:51:32,127 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:52:17,869 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:52:17,871 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:52:18,478 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:54:48,416 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:54:48,417 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:54:49,004 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:55:46,259 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:55:46,261 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:55:46,888 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:57:32,371 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:57:32,374 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:57:33,101 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:57:34,850 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:57:34,852 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:57:35,543 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:58:32,177 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:58:32,181 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:58:32,768 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:59:17,986 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:59:17,988 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:59:19,604 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:59:36,352 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:59:36,353 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:59:36,908 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:59:49,033 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:59:49,034 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:59:49,613 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 12:59:59,351 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 12:59:59,354 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 12:59:59,932 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 13:02:38,115 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:02:38,121 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:02:38,942 - [INFO] - from play in play-akka.actor.default-dispatcher-83 
+Application started (Dev)
+
+2012-04-30 13:03:10,623 - [INFO] - from play in play-akka.actor.default-dispatcher-89 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:03:10,626 - [INFO] - from play in play-akka.actor.default-dispatcher-89 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:03:11,232 - [INFO] - from play in play-akka.actor.default-dispatcher-89 
+Application started (Dev)
+
+2012-04-30 13:03:47,731 - [INFO] - from play in play-akka.actor.default-dispatcher-91 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:03:47,732 - [INFO] - from play in play-akka.actor.default-dispatcher-91 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:03:48,304 - [INFO] - from play in play-akka.actor.default-dispatcher-91 
+Application started (Dev)
+
+2012-04-30 13:04:37,393 - [INFO] - from play in play-akka.actor.default-dispatcher-93 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:04:37,396 - [INFO] - from play in play-akka.actor.default-dispatcher-93 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:04:38,100 - [ERROR] - from application in New I/O server worker #1-2 
+
+
+! @6a81olbmc - Internal server error, for request [GET /] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution! [An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:424) ~[play_2.9.1.jar:2.0]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:410) ~[play_2.9.1.jar:2.0]
+	at scala.collection.LinearSeqOptimized$class.foreach(LinearSeqOptimized.scala:59) ~[scala-library.jar:0.11.2]
+	at scala.collection.immutable.List.foreach(List.scala:45) ~[scala-library.jar:0.11.2]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:410) ~[play_2.9.1.jar:2.0]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:60) ~[play_2.9.1.jar:2.0]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:60) ~[play_2.9.1.jar:2.0]
+	at scala.collection.LinearSeqOptimized$class.foreach(LinearSeqOptimized.scala:59) ~[scala-library.jar:0.11.2]
+	at scala.collection.immutable.List.foreach(List.scala:45) ~[scala-library.jar:0.11.2]
+	at play.api.Play$.start(Play.scala:60) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$3$$anonfun$1.apply(ApplicationProvider.scala:125) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$3$$anonfun$1.apply(ApplicationProvider.scala:112) ~[play_2.9.1.jar:2.0]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:0.11.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$3.apply(ApplicationProvider.scala:112) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$3.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at scala.Either$RightProjection.flatMap(Either.scala:277) ~[scala-library.jar:0.11.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at akka.dispatch.Future$$anon$3.liftedTree1$1(Future.scala:195) ~[akka-actor.jar:2.0]
+	at akka.dispatch.Future$$anon$3.run(Future.scala:194) ~[akka-actor.jar:2.0]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:83) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1381) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[akka-actor.jar:2.0]
+
+2012-04-30 13:04:40,117 - [INFO] - from play in New I/O server worker #1-2 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:04:40,122 - [WARN] - from play in New I/O server worker #1-2 
+Applying evolution script for database 'default':
+
+# --- Rev:1,Ups - e5703cc
+create table job (
+ID                        bigint not null,
+NAME                      varchar(255) not null,
+JOBGRP                    bigint,
+latest_build              varchar(255),
+URL                       varchar(255) not null,
+colour                    varchar(255),
+latest_build_url          varchar(255),
+active                    boolean,
+constraint pk_job primary key (ID))
+;
+
+create table job_group (
+ID                        bigint not null,
+JOB_GROUP_NAME            varchar(255) not null,
+group_name                varchar(255),
+constraint pk_job_group primary key (ID))
+;
+
+create table main_url (
+id                        bigint not null,
+url                       varchar(255),
+constraint pk_main_url primary key (id))
+;
+
+create sequence job_seq;
+
+create sequence job_group_seq;
+
+create sequence main_url_seq;
+
+alter table job add constraint fk_job_jobGroup_1 foreign key (JOBGRP) references job_group (ID) on delete restrict on update restrict;
+create index ix_job_jobGroup_1 on job (JOBGRP);
+
+
+2012-04-30 13:04:40,482 - [INFO] - from play in play-akka.actor.default-dispatcher-93 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:04:40,483 - [INFO] - from play in play-akka.actor.default-dispatcher-93 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:04:41,032 - [INFO] - from play in play-akka.actor.default-dispatcher-93 
+Application started (Dev)
+
+2012-04-30 13:06:03,402 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:06:03,404 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:06:03,954 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+Application started (Dev)
+
+2012-04-30 13:07:15,742 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:07:15,743 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:07:16,324 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+Application started (Dev)
+
+2012-04-30 13:07:37,637 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:07:37,639 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:07:38,205 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+Application started (Dev)
+
+2012-04-30 13:08:24,234 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:08:24,236 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:08:24,786 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+Application started (Dev)
+
+2012-04-30 13:08:47,818 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:08:47,820 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:08:48,425 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+Application started (Dev)
+
+2012-04-30 13:09:13,613 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:09:13,615 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:09:14,164 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+Application started (Dev)
+
+2012-04-30 13:09:48,851 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:09:48,853 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:09:49,406 - [INFO] - from play in play-akka.actor.default-dispatcher-94 
+Application started (Dev)
+
+2012-04-30 13:11:11,824 - [INFO] - from play in play-akka.actor.default-dispatcher-97 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:11:11,826 - [INFO] - from play in play-akka.actor.default-dispatcher-97 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:11:12,446 - [INFO] - from play in play-akka.actor.default-dispatcher-97 
+Application started (Dev)
+
+2012-04-30 13:35:49,992 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:35:49,999 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:35:51,283 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+Application started (Dev)
+
+2012-04-30 13:36:05,600 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:36:05,603 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:36:06,224 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+Application started (Dev)
+
+2012-04-30 13:36:36,300 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:36:36,302 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:36:36,989 - [INFO] - from play in play-akka.actor.default-dispatcher-102 
+Application started (Dev)
+
+2012-04-30 13:39:47,847 - [INFO] - from play in play-akka.actor.default-dispatcher-105 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:39:47,851 - [INFO] - from play in play-akka.actor.default-dispatcher-105 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:39:48,458 - [INFO] - from play in play-akka.actor.default-dispatcher-105 
+Application started (Dev)
+
+2012-04-30 13:40:50,779 - [INFO] - from play in play-akka.actor.default-dispatcher-107 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:40:50,782 - [INFO] - from play in play-akka.actor.default-dispatcher-107 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:40:51,425 - [INFO] - from play in play-akka.actor.default-dispatcher-107 
+Application started (Dev)
+
+2012-04-30 13:41:32,377 - [INFO] - from play in play-akka.actor.default-dispatcher-110 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-04-30 13:41:32,378 - [INFO] - from play in play-akka.actor.default-dispatcher-110 
+database [default] connected at jdbc:h2:mem:play
+
+2012-04-30 13:41:33,172 - [INFO] - from play in play-akka.actor.default-dispatcher-110 
+Application started (Dev)
+

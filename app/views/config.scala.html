@@ -10,22 +10,44 @@
       }
 
       #config{
-          margin-top: 180px;
+          margin-top: 20px;
           width: 50%;
       }
 
     header {
-        background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
-        border-bottom: 1px solid #58ACFA;
-        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
         height: 10px;
         line-height: 50px;
-        padding: 30px 0;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
+    }
+
+    header strong {
+        text-align: right;
+        float: right;
+    }
+
+    footer {
+        bottom: 0;
+        border-bottom: 1px solid #58ACFA;
+        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+        height: 10px;
+        line-height: 20px;
+        padding: 30px 0;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    footer img {
+        margin-top: -50px;
+    }
+
+    footer strong {
+        margin-top: -100px;
     }
 
     header img {
@@ -59,10 +81,7 @@ dt {
 }
 </style>
         <header>
-   <img src="@routes.Assets.at("images/build_monitor_logo.png")" />
-            <strong style="font-size: 16px; font-style: italic;">configuration page.</strong><a href="/" style="font-size: 12px">(Back to Monitor)</a>
-
-<!-- in the future we will put the configuration here! -->
+            <strong style="float: right; font-size: 16px; font-style: italic;">Configuration page.<a href="/" style="font-size: 12px">(Back to Monitor)</a></strong>
 </header>
 <body>
 <div id="config">
@@ -75,4 +94,11 @@ dt {
     </div>
 }
 </div>
+<footer>
+   <img src="@routes.Assets.at("images/build_monitor_logo.png")" />
+            <strong style="font-size: 16px; font-style: italic;">configuration page.</strong><a href="/" style="font-size: 12px">(Back to Monitor)</a>
+
+<!-- in the future we will put the configuration here! -->
+</footer>
 </body>
+

@@ -1,0 +1,47 @@
+/* 
+* Amazium V1.0.1
+* Copyright 2012, Mike Ballan
+* www.amazium.co.uk
+*/
+
+/***** Place standard 960px view CSS under here *****/
+
+.example								{ margin-top:5px; padding:5px 0 5px 0; background-color: #4aa1ed; text-align:center; }
+.test-class								{ margin:0; padding:0; }
+
+/***** End *****/	
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+/***** Place iPad view CSS under here (Smaller than 959px) *****/
+
+.test-class								{ margin:0; padding:0; }
+
+/***** End *****/
+
+
+
+
+} @media only screen and (max-width: 767px) {
+
+/***** Place iPhone portrait view CSS under here (300px) *****/
+
+.test-class								{ margin:0; padding:0; }
+
+/***** End *****/
+
+
+
+
+} @media only screen and (min-width: 480px) and (max-width: 767px) {
+
+/***** Place iPhone landscape view CSS under here (456px) *****/
+
+.test-class								{ margin:0; padding:0; }
+
+/***** End *****/
+
+}
