@@ -13,8 +13,11 @@
         </style>
      <div id="list" class="row">
     @for(job <- jobs){
-            <div class="grid_12 job @job.getColour()">
-                <strong><a class="title" href="@job.getUrl()" >@job.getName()</a>
+            <div class="grid_12 job @job.getColour()
+                 @if(job.isHidden()){
+                 hidden
+                 }">
+                <strong><a class="@if(job.isHighlighted()){highlighted} else {title}" href="@job.getUrl()" >@job.getName()</a>
                           - Build: <a href="@job.getLatestBuildUrl()">#@job.getLatestBuildNumber()</a>
                 @if(job.inProgress()){
                    <!--img src="@routes.Assets.at("images/progress.gif")" /-->

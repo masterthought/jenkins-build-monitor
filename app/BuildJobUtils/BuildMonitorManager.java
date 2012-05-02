@@ -16,6 +16,8 @@ public class BuildMonitorManager {
 
 
     private static List<BuildMonitorJob> existingJobs = new ArrayList<BuildMonitorJob>();
+    public static List<String> hiddenJobs = new ArrayList<String>();
+    public static List<String> highlightedJobs = new ArrayList<String>();
 
     public static BuildMonitorManager getInstance(String url){
           if(INSTANCE==null){

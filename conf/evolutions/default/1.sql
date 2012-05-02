@@ -3,6 +3,18 @@
 
 # --- !Ups
 
+create table hidden_job (
+  ID                        bigint not null,
+  NAME                      varchar(255) not null,
+  constraint pk_hidden_job primary key (ID))
+;
+
+create table highlighted_job (
+  ID                        bigint not null,
+  NAME                      varchar(255) not null,
+  constraint pk_highlighted_job primary key (ID))
+;
+
 create table job (
   ID                        bigint not null,
   NAME                      varchar(255) not null,
@@ -28,6 +40,10 @@ create table main_url (
   constraint pk_main_url primary key (id))
 ;
 
+create sequence hidden_job_seq;
+
+create sequence highlighted_job_seq;
+
 create sequence job_seq;
 
 create sequence job_group_seq;
@@ -43,6 +59,10 @@ create index ix_job_jobGroup_1 on job (JOBGRP);
 
 SET REFERENTIAL_INTEGRITY FALSE;
 
+drop table if exists hidden_job;
+
+drop table if exists highlighted_job;
+
 drop table if exists job;
 
 drop table if exists job_group;
@@ -50,6 +70,10 @@ drop table if exists job_group;
 drop table if exists main_url;
 
 SET REFERENTIAL_INTEGRITY TRUE;
+
+drop sequence if exists hidden_job_seq;
+
+drop sequence if exists highlighted_job_seq;
 
 drop sequence if exists job_seq;
 

@@ -1,5 +1,10 @@
 package BuildJobUtils;
 
+import models.HiddenJob;
+import models.HighlightedJob;
+
+import java.util.List;
+
 public class BuildMonitorJob {
 
     private BuildStatus status;
@@ -20,6 +25,24 @@ public class BuildMonitorJob {
                 this.verbose.builds.size() == 0 ?
                         false :
                             !this.verbose.builds.get(0).number.equals(this.verbose.lastCompletedBuild.number);
+    }
+
+    public boolean isHidden(){
+        List<HiddenJob> hiddenJobList = HiddenJob.find.all();
+        if(hiddenJobList == null || hiddenJobList.size() == 0) return false;
+        for(HiddenJob job :hiddenJobList){
+            if(job.name.equals(this.buildJob.name)) return true;
+        }
+        return false;
+    }
+
+    public boolean isHighlighted(){
+        List<HighlightedJob> highlightedJobs = HighlightedJob.find.all();
+        if(highlightedJobs == null || highlightedJobs.size() == 0) return false;
+        for(HighlightedJob job :highlightedJobs){
+            if(job.name.equals(this.buildJob.name)) return true;
+        }
+        return false;
     }
 
     public BuildStatus getBuildStatus(){

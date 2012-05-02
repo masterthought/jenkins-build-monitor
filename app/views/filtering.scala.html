@@ -1,5 +1,10 @@
-@(myForm: Form[MainUrl])
-<style type="text/css">
+@(url : String, jobNamesList: List[String],   jobs: List[BuildJobUtils.BuildMonitorJob],   hideForm: Form[HiddenJob],    highForm: Form[HighlightedJob],   hideList : List[HiddenJob],   highList : List[HighlightedJob])
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Filter out or Hightlight Projects</title>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.asmselect.css")">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/filter.css")">
+     <style type="text/css">
 	  body {
 	    color: white;
 	    background-color: #2E2E2E;
@@ -79,29 +84,51 @@ dt {
     float: right;
     width: 20%;
 }
-</style>
-        <header>
-            <strong style="float: right; font-size: 16px; font-style: italic;">Configuration page.<a href="/" style="font-size: 12px">(Back to Monitor)</a></strong>
-            <br /><a href="/filtering">Add filtering?</a>
-</header>
-<body>
-<div id="config">
-@helper.form(action = routes.BuildConfig.persist()) {
-    <div id="fields">
-    @helper.inputText(myForm("url"))
-        </div>
-    <div id="button">
-    <input type="submit" class="btn" value="Change Configuration">
-    </div>
+
+label {
+    display: none;
 }
+</style>
+</head>
+<body>
+	<h1>Filtering Configuration</h1>
+    <a href="/" style="font-size: 12px">(Back to Monitor)</a>
+    <a href="/config" style="font-size: 12px">(Back to Config)</a>
+    <h3>Hidden Jobs</h3>
+    <ul>
+    @for(hide <- hideList){
+       <li>@hide.name</li>
+    }
+    </ul>
+    <h3>Highlighted Jobs</h3>
+    <ul>
+    @for(high <- highList){
+       <li>@high.name</li>
+    }
+    </ul>
 
+    @import helper._
+	@form(action = routes.BuildConfig.hidden()) {
+        @select(field = hideForm("name") , options(jobNamesList))
+        <input type="submit" class="btn" value="HIDE" />
+	}
 
-</div>
+	@form(action = routes.BuildConfig.highlight()) {
+        @select(field = highForm("name") , options(jobNamesList))
+        <input type="submit" class="btn" value="HIGHLIGHT" />
+	}
+
+    @form(action = routes.BuildConfig.clear()) {
+
+        <input type="submit" class="btn" value="CLEAR ALL FILTERS" />
+	}
+
 <footer>
    <img src="@routes.Assets.at("images/build_monitor_logo.png")" />
             <strong style="font-size: 16px; font-style: italic;">configuration page.</strong><a href="/" style="font-size: 12px">(Back to Monitor)</a>
 
 <!-- in the future we will put the configuration here! -->
 </footer>
-</body>
 
+</body>
+</html>
