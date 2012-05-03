@@ -1,4 +1,4 @@
-@(background: String , url: String, alljobs : List[BuildJobUtils.BuildMonitorJob])
+@(background: String , url: String, alljobs : List[BuildJobUtils.BuildMonitorJob], msg: Html)
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -33,14 +33,10 @@
 <header>
     <div id="config"><strong>For <a href="@url">URL</a> - <a href="/config" style="font-size: 12px">(Config)</a> </strong></div>
 </header>
+@message(message = msg)
 <div id="content">
 @buildmonitor(backgroundColour = background, jobs = alljobs)
 </div>
-<footer>
-   <img src="@routes.Assets.at("images/build_monitor_logo.png")" />
-            <strong style="font-size: 16px; font-style: italic;">configuration page.</strong><a href="/" style="font-size: 12px">(Back to Monitor)</a>
-
-<!-- in the future we will put the configuration here! -->
-</footer>
+@footer()
 </body>
 </html>

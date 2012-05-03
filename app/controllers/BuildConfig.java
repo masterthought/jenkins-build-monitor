@@ -30,7 +30,7 @@ public class BuildConfig extends Controller {
 
       url.save();
       clearAllFiltering();
-      return redirect("/");
+      return redirect("/filtering");
   }
 
   public static Result filter() {

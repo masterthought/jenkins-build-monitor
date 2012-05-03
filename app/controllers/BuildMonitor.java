@@ -4,6 +4,7 @@ import BuildJobUtils.BuildMonitorJob;
 import BuildJobUtils.BuildMonitorManager;
 import models.Job;
 import models.MainUrl;
+import play.api.templates.Html;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -31,13 +32,45 @@ public class BuildMonitor extends Controller {
 
       String backgroundColour = BuildMonitorManager.getBackgroundColour();
 
-      return ok(views.html.index.render(backgroundColour, url.url,alljobs));
+      String message;
+
+
+
+      if(alljobs == null || alljobs.isEmpty()){
+          message = "NO PROJECTS FOUND FOR: " + getLinkText(url.url);
+      } else {
+          if(alljobs.size()==1){
+             message = "1 Project found for " + getLinkText(url.url);
+          }
+          else {
+              message = alljobs.size() +" Projects found for " + getLinkText(url.url);
+          }
+      }
+
+
+      return ok(views.html.index.render(backgroundColour, url.url,alljobs, new Html(message)));
+  }
+
+  private static String getLinkText(String url){
+      String text =  (url.length() > 50) ? url.substring(0,24) + "..." : url;
+      return "<a href=\"" + url +"\">" + text + "</a>";
   }
   
   public static Result buildmonitor() {
-        List<BuildMonitorJob> jobs = getAllJobs();
+        List<BuildMonitorJob> alljobs = getAllJobs();
+      String message;
+      if(alljobs == null || alljobs.isEmpty()){
+          message = "NO PROJECTS FOUND";
+      } else {
+          if(alljobs.size()==1){
+             message = "1 Project found";
+          }
+          else {
+              message = alljobs.size() +" Projects found";
+          }
+      }
       String backgroundColour = BuildMonitorManager.getBackgroundColour();
-      return ok(views.html.buildmonitor.render(backgroundColour, jobs));
+      return ok(views.html.buildmonitor.render(backgroundColour, alljobs));
   }
 
   public static List<BuildMonitorJob> getAllJobs(){

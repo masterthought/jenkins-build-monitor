@@ -3,6 +3,7 @@ package BuildJobUtils;
 import models.MainUrl;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BuildMonitorManager {
@@ -15,7 +16,7 @@ public class BuildMonitorManager {
     }
 
 
-    private static List<BuildMonitorJob> existingJobs = new ArrayList<BuildMonitorJob>();
+    private static List<BuildMonitorJob> existingJobs = Collections.synchronizedList(new ArrayList());
     public static List<String> hiddenJobs = new ArrayList<String>();
     public static List<String> highlightedJobs = new ArrayList<String>();
 
@@ -39,6 +40,7 @@ public class BuildMonitorManager {
 
 
       public void refreshAllJobs(MainUrl url){
+        synchronized (existingJobs){
          try {
              System.out.println("Refreshing for: " + url.url);
             url.refresh();
@@ -73,6 +75,7 @@ public class BuildMonitorManager {
              System.out.println(getBackgroundColour());
         } catch (Exception e) {
             e.printStackTrace();
+        }
         }
       }
 
