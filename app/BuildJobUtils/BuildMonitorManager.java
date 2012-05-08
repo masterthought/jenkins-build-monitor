@@ -1,7 +1,5 @@
 package BuildJobUtils;
 
-import models.MainUrl;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -30,21 +28,21 @@ public class BuildMonitorManager {
     private static BuildMonitorManager INSTANCE;
 
     protected BuildMonitorManager(String url){
-        MainUrl mainUrl = new MainUrl();
-        mainUrl.url = url;
-        mainUrl.save();
-        mainUrl.refresh();
-        this.url = url;
-        refreshAllJobs(mainUrl);
+//        MainUrl mainUrl = new MainUrl();
+//        mainUrl.url = url;
+//        mainUrl.save();
+//        mainUrl.refresh();
+//        this.url = url;
+        refreshAllJobs(url);
     }
 
 
-      public void refreshAllJobs(MainUrl url){
+      public void refreshAllJobs(String url){
         synchronized (existingJobs){
          try {
-             System.out.println("Refreshing for: " + url.url);
-            url.refresh();
-            List<BuildJob> buildJobs = JsonResolver.getAvailableBuildJobs(url.url);
+             System.out.println("Refreshing for: " + url);
+//            url.refresh();
+            List<BuildJob> buildJobs = JsonResolver.getAvailableBuildJobs(url);
             existingJobs.clear();
             int red = 0;
             int blue = 0;
@@ -85,7 +83,7 @@ public class BuildMonitorManager {
         return backgroundColor;
     }
 
-    public List<BuildMonitorJob> getMonitorJobs(MainUrl url){
+    public List<BuildMonitorJob> getMonitorJobs(String url){
         refreshAllJobs(url);
         return existingJobs;
     }

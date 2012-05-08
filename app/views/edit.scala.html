@@ -1,5 +1,10 @@
-@(myForm: Form[MainUrl])
-<style type="text/css">
+@(myForm : Form[BuildMonitorConfig], jobNames: List[String], config: BuildMonitorConfig)
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Edit @config.name</title>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.asmselect.css")">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/filter.css")">
+     <style type="text/css">
 	  body {
 	    color: white;
 	    background-color: #2E2E2E;
@@ -79,24 +84,32 @@ dt {
     float: right;
     width: 20%;
 }
-</style>
-        <header>
-            <strong style="float: right; font-size: 16px; font-style: italic;">Configuration page.<a href="/" style="font-size: 12px">(Back to Monitor)</a></strong>
-            <br /><a href="/filtering">Add filtering?</a>
-</header>
-<body>
-<div id="config">
-@helper.form(action = routes.BuildConfig.persist()) {
-    <div id="fields">
-    @helper.inputText(myForm("url"))
-        </div>
-    <div id="button">
-    <input type="submit" class="btn" value="Change Configuration">
-    </div>
+
+label {
+    display: none;
 }
+</style>
+</head>
+<body>
+	<h1>Edit Monitor Configuration for @config.name</h1>
+    <a href="/" style="font-size: 12px">(Back to All Configs)</a>
+    <a href="/display/@config.id" style="font-size: 12px">(Back to display of @config.name)</a>
+    <h3>Update Config</h3>
 
+    @import helper._
+	@form(action = routes.BuildMonitorController.update(config.id)) {
+        @inputText(myForm("name"))
+        @inputText(myForm("buildUrl"))
+        <table>
+        @for(jobName <- jobNames) {
 
-</div>
+            <tr><td>@jobName</td><td>- Hide:<input type="CHECKBOX" name="hide" value="HIDE" /></td><td>- Highlight:<input type="CHECKBOX" name="high" value="HIGHLIGHT" /></td></tr>
+        }
+        </table>
+        <input type="submit" class="btn" value="UPDATE" />
+	}
+
 @footer()
-</body>
 
+</body>
+</html>

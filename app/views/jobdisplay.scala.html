@@ -1,0 +1,36 @@
+@(colour: String, config: BuildMonitorConfig)
+
+        <script type="text/javascript">
+    $(document).ready(function(){
+          var shortable = new glow.widgets.Sortable('#list');
+});
+    </script>
+
+        <style type="text/css">
+            body {
+	    color: white;
+	    background-color: @colour }
+        </style>
+
+
+<div id="list" class="row">
+@if(config.jobs.isEmpty()){
+       <strong>There are no jobs found</strong>
+    }
+    @if(!config.jobs.isEmpty()) {
+            @for(job <- config.jobs){
+                <div class="grid_12 job @job.color @if(job.hidden){
+                 hidden
+                 }">
+                   <strong><a class="@if(job.highlight){highlighted} else {title}" href="@job.url" >@job.getName()</a>
+                          - Build: <a href="@job.getLatestBuildUrl()">#@job.buildNumber</a>
+                @if(job.inProgress){
+                   <!--img src="@routes.Assets.at("images/progress.gif")" /-->
+                            <i>BUILD IN PROGRESS</i>
+                }
+                    </strong>
+                 </div>
+            }
+        }
+</div>
+

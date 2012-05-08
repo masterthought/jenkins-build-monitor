@@ -1,4 +1,4 @@
-@(managers: List[BuildMonitorConfig])
+@(myForm: Form[BuildMonitorConfig])
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -22,6 +22,7 @@
 
 
 </head>
+<body>
 <style type="text/css">
 	  body {
 	    color: white;
@@ -35,7 +36,6 @@
       #config{
           margin-top: 20px;
           width: 50%;
-          color: white;
       }
 
       #config a{
@@ -108,23 +108,15 @@ dt {
     width: 20%;
 }
 </style>
-        <header>
-            <strong style="float: right; font-size: 16px; font-style: italic;">All available Projects</strong>
-            <br /><a href="/new">Add new?</a>
-</header>
-<body>
 <div id="config">
-    @if(managers.isEmpty()){
-       <strong>There are no build monitors. Please create one.</strong>
-    }
-    @if(!managers.isEmpty()) {
-            <ul>
-            @for(manager <- managers){
-               <li><a href="/display/@manager.id">@manager.name</a> - <a href="/edit/@manager.id">EDIT?</a> - <a href="/delete/@manager.id">DELETE?</a></li>
-            }
-            </ul>
-        }
+    @import helper._
+	@form(action = routes.BuildMonitorController.create()) {
+        @inputText(myForm("name"))
+        @inputText(myForm("buildUrl"))
+        <input type="submit" class="btn" value="CREATE" />
+	}
+
 </div>
-@footer()
+
 </body>
 </html>

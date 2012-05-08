@@ -31,6 +31,7 @@ public class JsonResolver {
         return result;
     }
 
+
     public static StringBuffer getJobJsonString(BuildJob job) throws Exception{
         if(job == null) return null;
         return getJsonFromUrl(job.url + "api/json");

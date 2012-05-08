@@ -1,5 +1,4 @@
-Jenkins Build Monitor ... by MasterThought
-==============
+This is your new Play 2.0 application
+=====================================
 
-Wiki Comments:
--Kostas Mamalis: Distribution contains a ./start file. Make it executable and off you go!
+This file will be packaged with your application, when using `play dist`.
