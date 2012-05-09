@@ -10,22 +10,14 @@ import play.mvc.*;
 import com.avaje.ebean.Ebean;
 import play.db.ebean.Transactional;
 
-
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BuildMonitorController extends Controller {
 
     public static Result index() {
-        List<BuildMonitorConfig> configs = new ArrayList<BuildMonitorConfig>();
-        try {
-            configs = BuildMonitorConfig.find.all();
-
-        } catch (RuntimeException re) {
-
-        } finally {
-            return ok(views.html.index.render(configs));
-        }
+        return redirect("/config");
     }
 
     public static Result newmonitor() {
@@ -38,7 +30,7 @@ public class BuildMonitorController extends Controller {
         Form<BuildMonitorConfig> configForm = form(BuildMonitorConfig.class);
         BuildMonitorConfig config = configForm.bindFromRequest().get();
         config.save();
-        return redirect("/");
+        return redirect("/config");
     }
 
     public static Result display(Long id) {
@@ -49,26 +41,60 @@ public class BuildMonitorController extends Controller {
     public static Result delete(Long id){
         BuildMonitorConfig config = BuildMonitorConfig.find.byId(id);
         config.delete();
-        return redirect("/");
+        return redirect("/config");
     }
 
     public static Result edit(Long id) {
         Form<BuildMonitorConfig> configForm = form(BuildMonitorConfig.class);
-        BuildMonitorConfig buildMonitorConfig = configForm.bindFromRequest().get();
+        List<Form<models.BuildJob>> jobFormList = new ArrayList<Form<models.BuildJob>>();
         BuildMonitorConfig config = BuildMonitorConfig.find.byId(id);
         configForm = configForm.fill(config);
-        return ok(views.html.edit.render(configForm, getJobNames(id), config));
+
+        if(config.jobs != null && !config.jobs.isEmpty() ){
+            for(models.BuildJob j : config.jobs){
+                Form<models.BuildJob> jobForm = form(models.BuildJob.class);
+                jobForm = jobForm.fill(j);
+                jobFormList.add(jobForm);
+            }
+        }
+
+        return ok(views.html.edit.render(configForm, jobFormList, config));
+    }
+
+    public static Result config() {
+        List<BuildMonitorConfig> configs = new ArrayList<BuildMonitorConfig>();
+        Form<BuildMonitorConfig> configForm = form(BuildMonitorConfig.class);
+        try {
+            configs = BuildMonitorConfig.find.all();
+
+        } catch (RuntimeException re) {
+
+        } finally {
+            return ok(views.html.config.render(configs, configForm));
+        }
     }
 
     public static Result update(Long id){
         Form<BuildMonitorConfig> configForm = form(BuildMonitorConfig.class);
         BuildMonitorConfig buildMonitorConfig = configForm.bindFromRequest().get();
-        BuildMonitorConfig objectToupdate = BuildMonitorConfig.find.byId(id);
-        buildMonitorConfig.id = objectToupdate.id;
-        objectToupdate.name = buildMonitorConfig.name;
-        objectToupdate.buildUrl = buildMonitorConfig.buildUrl;
+        System.out.println("Attempt to update build monitor configuration:" + id);
+        BuildMonitorConfig buildMonitorConfigToUpdate = BuildMonitorConfig.find.byId(id);
+        buildMonitorConfigToUpdate.name = buildMonitorConfig.name;
+        buildMonitorConfigToUpdate.buildUrl =  buildMonitorConfig.buildUrl;
 
-        return redirect("/");
+        buildMonitorConfigToUpdate.update();
+        return ok("Successful edit of Build Monitor Config: "+id);
+    }
+
+    public static Result updateJob(Long id){
+        Form<models.BuildJob> configForm = form(models.BuildJob.class);
+        models.BuildJob buildJob = configForm.bindFromRequest().get();
+        System.out.println("Attempt to update job:" + id);
+        models.BuildJob buildJobToUpdate = models.BuildJob.find.byId(id);
+        buildJobToUpdate.hidden = buildJob.hidden;
+        buildJobToUpdate.highlight = buildJob.highlight;
+        buildJobToUpdate.update();
+        return ok("Successful edit of Job Config: "+id);
     }
 
 
@@ -128,13 +154,19 @@ public class BuildMonitorController extends Controller {
                                job.displayOrder = buildJobs.indexOf(buildJob);
                                job.buildNumber = monitorJob.getLatestBuildNumber();
                                job.inProgress = monitorJob.inProgress();
-                               System.out.println("Befor an update");
+                               System.out.println("Before an update");
 
                                models.BuildJob existingJob = BuildMonitorConfig.containsJob(config,job.name);
                                if(existingJob != null) {
                                    System.out.println("The job is already related to the config: " + config.name);
                                    job.id = existingJob.id;
+                                   job.hidden = existingJob.hidden;
+                                   job.highlight = existingJob.highlight;
                                    existingJob = job;
+                                   System.out.println
+                                           ("For " + existingJob.name + " hidden is:" + existingJob.hidden +
+                                             " and highlight is:" +  existingJob.highlight
+                                            );
                                    job.update();
                                    config.update();
                                    config.refresh();

@@ -1,89 +1,11 @@
-@(myForm : Form[BuildMonitorConfig], jobNames: List[String], config: BuildMonitorConfig)
+@(myForm : Form[BuildMonitorConfig], jobs: List[Form[models.BuildJob]], config: BuildMonitorConfig)
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Edit @config.name</title>
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.asmselect.css")">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/filter.css")">
      <style type="text/css">
 	  body {
-	    color: white;
-	    background-color: #2E2E2E;
         font-family: verdana;
       }
-      a {
-          color: white;
-      }
-
-      #config{
-          margin-top: 20px;
-          width: 50%;
-      }
-
-    header {
-        height: 10px;
-        line-height: 50px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    header strong {
-        text-align: right;
-        float: right;
-    }
-
-    footer {
-        bottom: 0;
-        border-bottom: 1px solid #58ACFA;
-        box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
-        height: 10px;
-        line-height: 20px;
-        padding: 30px 0;
-        position: fixed;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-    }
-
-    footer img {
-        margin-top: -50px;
-    }
-
-    footer strong {
-        margin-top: -100px;
-    }
-
-    header img {
-        margin-top: -50px;
-    }
-
-dd {
- width:30%;
- overflow:hidden;
-}
-dt {
- float:left;
-}
-.info {
-    display: none;
- float:right;
- width:10%;
- overflow: hidden;
- margin: 0;
- padding: 0;
-}
-
-#fields {
-    float: left;
-    width: 70%;
-}
-
-#button {
-    float: right;
-    width: 20%;
-}
 
 label {
     display: none;
@@ -92,24 +14,35 @@ label {
 </head>
 <body>
 	<h1>Edit Monitor Configuration for @config.name</h1>
-    <a href="/" style="font-size: 12px">(Back to All Configs)</a>
-    <a href="/display/@config.id" style="font-size: 12px">(Back to display of @config.name)</a>
     <h3>Update Config</h3>
 
     @import helper._
 	@form(action = routes.BuildMonitorController.update(config.id)) {
         @inputText(myForm("name"))
         @inputText(myForm("buildUrl"))
+        <input type="submit" class="btn" value="UPDATE" />
+    }
+    <h3>Update Jobs</h3>
         <table>
-        @for(jobName <- jobNames) {
-
-            <tr><td>@jobName</td><td>- Hide:<input type="CHECKBOX" name="hide" value="HIDE" /></td><td>- Highlight:<input type="CHECKBOX" name="high" value="HIGHLIGHT" /></td></tr>
+            <thead>
+                   <th>NAME</th>
+                   <th>HIDE</th>
+                   <th>HIGHLIGHT</th>
+                   <th></th>
+              </thead>
+        @for(job <- jobs) {
+             <tr>
+                  <td>@inputText(job("name"))</td>
+                  @form(action = routes.BuildMonitorController.updateJob(job.value().get().id)) {
+                  <td>@checkbox(job("hidden"), '_label -> "Hidden")<!--input type="CHECKBOX" name="hide" value="HIDE" /--></td>
+                  <td>@checkbox(job("highlight"), '_label -> "Highlighted")<!--input type="CHECKBOX" name="high" value="HIGHLIGHT" /--></td>
+                  <td><input type="submit" class="btn" value="UPDATE JOB" /></td>
+              </tr>
+            }
         }
         </table>
-        <input type="submit" class="btn" value="UPDATE" />
-	}
 
-@footer()
+
 
 </body>
 </html>

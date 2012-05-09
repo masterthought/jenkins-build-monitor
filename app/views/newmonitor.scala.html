@@ -110,7 +110,7 @@ dt {
 </style>
 <div id="config">
     @import helper._
-	@form(action = routes.BuildMonitorController.create()) {
+	@form(action = routes.BuildMonitorController.create(), 'id -> "myForm" ) {
         @inputText(myForm("name"))
         @inputText(myForm("buildUrl"))
         <input type="submit" class="btn" value="CREATE" />

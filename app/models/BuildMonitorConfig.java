@@ -20,6 +20,16 @@ public class BuildMonitorConfig extends Model {
 
     public String buildUrl;
 
+    public String getName(){
+        return this.name.length() < 35 ? name : name.substring(0,31) + "...";
+
+    }
+
+    public String getUrl(){
+        return this.buildUrl.length() < 35 ? buildUrl : buildUrl.substring(0,31) + "...";
+
+    }
+
     public String backgroundColor;
 
     @ManyToMany(cascade = CascadeType.ALL)

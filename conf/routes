@@ -10,7 +10,9 @@ GET     /display/:id                controllers.BuildMonitorController.display(i
 GET     /jobsDisplay/:id            controllers.BuildMonitorController.jobDisplay(id: Long)
 GET     /delete/:id                 controllers.BuildMonitorController.delete(id: Long)
 GET     /edit/:id                   controllers.BuildMonitorController.edit(id: Long)
-GET     /update/id                controllers.BuildMonitorController.update(id: Long)
+GET     /update/:id                     controllers.BuildMonitorController.update(id: Long)
+GET     /updateJob/:id                  controllers.BuildMonitorController.updateJob(id: Long)
+GET     /config                     controllers.BuildMonitorController.config()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
