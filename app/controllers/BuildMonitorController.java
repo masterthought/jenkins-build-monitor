@@ -93,7 +93,7 @@ public class BuildMonitorController extends Controller {
         configForm = configForm.fill(config);
 
         if(config.jobs != null && !config.jobs.isEmpty() ){
-            for(models.BuildJob j : config.jobs){
+            for(models.BuildJob j : config.getJobs()){
                 Form<models.BuildJob> jobForm = form(models.BuildJob.class);
                 jobForm = jobForm.fill(j);
                 jobFormList.add(jobForm);
