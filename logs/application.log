@@ -1,12 +1,518 @@
-2012-05-09 12:56:03,322 - [INFO] - from play in main 
+2012-05-14 11:27:55,434 - [INFO] - from play in main 
 Listening for HTTP on port 9000...
 
-2012-05-09 12:58:47,743 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
+2012-05-14 11:28:02,537 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2012-05-09 12:58:47,830 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
+2012-05-14 11:28:02,590 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
 database [default] connected at jdbc:h2:mem:play
 
-2012-05-09 12:58:50,547 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
+2012-05-14 11:28:04,877 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
+Application started (Dev)
+
+2012-05-14 11:28:13,104 - [ERROR] - from application in play-akka.actor.actions-dispatcher-5 
+
+
+! @6ac087pe8 - Internal server error, for request [GET /update_order/1/ATM%20simple,%20firefox%20tests,%20new%20job,%20new%20job%20for%20testing,%20test%20on%20all%20projects,%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad,%20test-cobertura,%20working%20simple(1),%20working%20simple(2),%20working%20simple(3)?_=1336991293032] ->
+
+play.core.ActionInvoker$$anonfun$receive$1$$anon$1: Execution exception [[NullPointerException: null]]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:82) [play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:63) [play_2.9.1.jar:2.0]
+	at akka.actor.Actor$class.apply(Actor.scala:290) [akka-actor.jar:2.0]
+	at play.core.ActionInvoker.apply(Invoker.scala:61) [play_2.9.1.jar:2.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:617) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:179) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:161) [akka-actor.jar:2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:505) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [akka-actor.jar:2.0]
+Caused by: java.lang.NullPointerException: null
+	at controllers.BuildMonitorController.updateOrder(BuildMonitorController.java:66) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$apply$25$$anonfun$apply$26.apply(routes_routing.scala:176) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$apply$25$$anonfun$apply$26.apply(routes_routing.scala:176) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.invocation(Router.scala:1086) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:33) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.apply(Router.scala:1085) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:17) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:73) [play_2.9.1.jar:2.0]
+	... 11 common frames omitted
+
+2012-05-14 11:30:51,266 - [INFO] - from play in play-akka.actor.default-dispatcher-2 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 11:30:51,272 - [INFO] - from play in play-akka.actor.default-dispatcher-2 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 11:30:59,390 - [INFO] - from play in play-akka.actor.default-dispatcher-2 
+Application started (Dev)
+
+2012-05-14 11:31:09,798 - [ERROR] - from application in play-akka.actor.actions-dispatcher-9 
+
+
+! @6ac087pe9 - Internal server error, for request [GET /update_order/1/dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad%20dda%20adfasfd%20a%20afsddf%20adsf%20asdfklj%20sad,%20firefox%20tests,%20new%20job,%20new%20job%20for%20testing,%20test%20on%20all%20projects,%20test-cobertura,%20ATM%20simple,%20working%20simple(1),%20working%20simple(2),%20working%20simple(3)?_=1336991469716] ->
+
+play.core.ActionInvoker$$anonfun$receive$1$$anon$1: Execution exception [[NullPointerException: null]]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:82) [play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:63) [play_2.9.1.jar:2.0]
+	at akka.actor.Actor$class.apply(Actor.scala:290) [akka-actor.jar:2.0]
+	at play.core.ActionInvoker.apply(Invoker.scala:61) [play_2.9.1.jar:2.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:617) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:179) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:161) [akka-actor.jar:2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:505) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [akka-actor.jar:2.0]
+Caused by: java.lang.NullPointerException: null
+	at controllers.BuildMonitorController.updateOrder(BuildMonitorController.java:66) ~[classes/:2.0]
+	at Routes$$anonfun$routes$1$$anonfun$apply$25$$anonfun$apply$26.apply(routes_routing.scala:176) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$apply$25$$anonfun$apply$26.apply(routes_routing.scala:176) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.invocation(Router.scala:1086) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:33) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.apply(Router.scala:1085) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:17) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:73) [play_2.9.1.jar:2.0]
+	... 11 common frames omitted
+
+2012-05-14 11:31:55,041 - [INFO] - from play in play-akka.actor.default-dispatcher-2 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 11:31:55,043 - [INFO] - from play in play-akka.actor.default-dispatcher-2 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 11:31:56,272 - [INFO] - from play in play-akka.actor.default-dispatcher-2 
+Application started (Dev)
+
+2012-05-14 11:33:13,856 - [INFO] - from play in play-akka.actor.default-dispatcher-11 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 11:33:13,858 - [INFO] - from play in play-akka.actor.default-dispatcher-11 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 11:33:15,733 - [INFO] - from play in play-akka.actor.default-dispatcher-11 
+Application started (Dev)
+
+2012-05-14 11:34:45,674 - [INFO] - from play in play-akka.actor.default-dispatcher-15 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 11:34:45,676 - [INFO] - from play in play-akka.actor.default-dispatcher-15 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 11:34:46,641 - [INFO] - from play in play-akka.actor.default-dispatcher-15 
+Application started (Dev)
+
+2012-05-14 15:06:15,799 - [ERROR] - from application in New I/O server worker #1-1 
+
+
+! Internal server error, for request [GET /] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error [incompatible types [found: com.avaje.ebean.Query<models.BuildMonitorConfig>] [required: java.util.List<models.BuildJob>]]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2$$anonfun$apply$11$$anonfun$apply$12.apply(PlayReloader.scala:224) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2$$anonfun$apply$11$$anonfun$apply$12.apply(PlayReloader.scala:224) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:0.11.2]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2$$anonfun$apply$11.apply(PlayReloader.scala:224) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2$$anonfun$apply$11.apply(PlayReloader.scala:221) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:0.11.2]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2.apply(PlayReloader.scala:221) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2.apply(PlayReloader.scala:219) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:183) ~[scala-library.jar:0.11.2]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3.apply(PlayReloader.scala:219) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3.apply(PlayReloader.scala:214) ~[na:na]
+	at scala.Option.getOrElse(Option.scala:108) ~[scala-library.jar:0.11.2]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:214) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at akka.dispatch.Future$$anon$3.liftedTree1$1(Future.scala:195) ~[akka-actor.jar:2.0]
+	at akka.dispatch.Future$$anon$3.run(Future.scala:194) ~[akka-actor.jar:2.0]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:83) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1381) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[akka-actor.jar:2.0]
+
+2012-05-14 15:09:57,307 - [ERROR] - from application in New I/O server worker #1-2 
+
+
+! Internal server error, for request [GET /] ->
+
+sbt.PlayExceptions$CompilationException: Compilation error [incompatible types [found: java.util.List<models.BuildMonitorConfig>] [required: java.util.List<models.BuildJob>]]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2$$anonfun$apply$11$$anonfun$apply$12.apply(PlayReloader.scala:224) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2$$anonfun$apply$11$$anonfun$apply$12.apply(PlayReloader.scala:224) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:0.11.2]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2$$anonfun$apply$11.apply(PlayReloader.scala:224) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2$$anonfun$apply$11.apply(PlayReloader.scala:221) ~[na:na]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:0.11.2]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2.apply(PlayReloader.scala:221) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3$$anonfun$2.apply(PlayReloader.scala:219) ~[na:na]
+	at scala.Either$LeftProjection.map(Either.scala:183) ~[scala-library.jar:0.11.2]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3.apply(PlayReloader.scala:219) ~[na:na]
+	at sbt.PlayReloader$$anon$2$$anonfun$reload$3.apply(PlayReloader.scala:214) ~[na:na]
+	at scala.Option.getOrElse(Option.scala:108) ~[scala-library.jar:0.11.2]
+	at sbt.PlayReloader$$anon$2.reload(PlayReloader.scala:214) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at akka.dispatch.Future$$anon$3.liftedTree1$1(Future.scala:195) ~[akka-actor.jar:2.0]
+	at akka.dispatch.Future$$anon$3.run(Future.scala:194) ~[akka-actor.jar:2.0]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:83) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1381) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[akka-actor.jar:2.0]
+
+2012-05-14 15:10:35,394 - [INFO] - from play in play-akka.actor.default-dispatcher-32 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:10:35,452 - [INFO] - from play in play-akka.actor.default-dispatcher-32 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:10:36,886 - [ERROR] - from application in New I/O server worker #1-2 
+
+
+! @6ac087pea - Internal server error, for request [GET /] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution! [An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:424) ~[play_2.9.1.jar:2.0]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:410) ~[play_2.9.1.jar:2.0]
+	at scala.collection.LinearSeqOptimized$class.foreach(LinearSeqOptimized.scala:59) ~[scala-library.jar:0.11.2]
+	at scala.collection.immutable.List.foreach(List.scala:45) ~[scala-library.jar:0.11.2]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:410) ~[play_2.9.1.jar:2.0]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:60) ~[play_2.9.1.jar:2.0]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:60) ~[play_2.9.1.jar:2.0]
+	at scala.collection.LinearSeqOptimized$class.foreach(LinearSeqOptimized.scala:59) ~[scala-library.jar:0.11.2]
+	at scala.collection.immutable.List.foreach(List.scala:45) ~[scala-library.jar:0.11.2]
+	at play.api.Play$.start(Play.scala:60) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$3$$anonfun$1.apply(ApplicationProvider.scala:125) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$3$$anonfun$1.apply(ApplicationProvider.scala:112) ~[play_2.9.1.jar:2.0]
+	at scala.Option.map(Option.scala:133) ~[scala-library.jar:0.11.2]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$3.apply(ApplicationProvider.scala:112) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$3.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at scala.Either$RightProjection.flatMap(Either.scala:277) ~[scala-library.jar:0.11.2]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[play_2.9.1.jar:2.0]
+	at akka.dispatch.Future$$anon$3.liftedTree1$1(Future.scala:195) ~[akka-actor.jar:2.0]
+	at akka.dispatch.Future$$anon$3.run(Future.scala:194) ~[akka-actor.jar:2.0]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:83) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1381) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) ~[akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[akka-actor.jar:2.0]
+
+2012-05-14 15:11:06,433 - [INFO] - from play in New I/O server worker #1-2 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:11:06,444 - [WARN] - from play in New I/O server worker #1-2 
+Applying evolution script for database 'default':
+
+# --- Rev:1,Ups - 03fd4e1
+create table build_job (
+id                        bigint not null,
+name                      varchar(1024),
+url                       varchar(1024),
+color                     varchar(255),
+build_number              varchar(255),
+hidden                    boolean,
+highlight                 boolean,
+in_progress               boolean,
+display_order             integer,
+constraint pk_build_job primary key (id))
+;
+
+create table build_monitor_config (
+id                        bigint not null,
+name                      varchar(255),
+build_url                 varchar(255),
+background_color          varchar(255),
+constraint pk_build_monitor_config primary key (id))
+;
+
+create table global_config (
+id                        bigint not null,
+refresh_rate_in_seconds   integer,
+sounds_activated          boolean,
+path_to_sounds            varchar(255),
+play_sound_on_failure     boolean,
+play_sound_on_success     boolean,
+play_sound_on_unstable    boolean,
+display_avatars           boolean,
+display_latest_successful boolean,
+description               varchar(255),
+constraint pk_global_config primary key (id))
+;
+
+
+create table build_monitor_config_build_job (
+build_monitor_config_id        bigint not null,
+build_job_id                   bigint not null,
+constraint pk_build_monitor_config_build_job primary key (build_monitor_config_id, build_job_id))
+;
+create sequence build_job_seq;
+
+create sequence build_monitor_config_seq;
+
+create sequence global_config_seq;
+
+
+
+
+alter table build_monitor_config_build_job add constraint fk_build_monitor_config_build_01 foreign key (build_monitor_config_id) references build_monitor_config (id) on delete restrict on update restrict;
+
+alter table build_monitor_config_build_job add constraint fk_build_monitor_config_build_02 foreign key (build_job_id) references build_job (id) on delete restrict on update restrict;
+
+
+2012-05-14 15:11:06,980 - [INFO] - from play in play-akka.actor.default-dispatcher-32 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:11:06,984 - [INFO] - from play in play-akka.actor.default-dispatcher-32 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:11:07,950 - [INFO] - from play in play-akka.actor.default-dispatcher-32 
+Application started (Dev)
+
+2012-05-14 15:13:51,561 - [INFO] - from play in play-akka.actor.default-dispatcher-41 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:13:51,577 - [INFO] - from play in play-akka.actor.default-dispatcher-41 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:13:52,876 - [INFO] - from play in play-akka.actor.default-dispatcher-41 
+Application started (Dev)
+
+2012-05-14 15:13:57,064 - [ERROR] - from application in play-akka.actor.actions-dispatcher-28 
+
+
+! @6ac087peb - Internal server error, for request [GET /edit/1] ->
+
+play.core.ActionInvoker$$anonfun$receive$1$$anon$1: Execution exception [[PersistenceException: Query threw SQLException:Order by expression "DISPLAY_ORDER" must be in the result list in this case; SQL statement:
+select distinct t0.id c0, t0.name c1, t0.url c2, t0.color c3, t0.build_number c4, t0.hidden c5, t0.highlight c6, t0.in_progress c7, t0.display_order c8 
+from build_job t0
+join build_monitor_config_build_job u1z_ on u1z_.build_job_id = t0.id 
+join build_monitor_config u1 on u1.id = u1z_.build_monitor_config_id  
+where u1.id = ?  
+order by display_order [90068-158] 
+Bind values:[null] 
+Query was:
+select distinct t0.id c0, t0.name c1, t0.url c2, t0.color c3, t0.build_number c4, t0.hidden c5, t0.highlight c6, t0.in_progress c7, t0.display_order c8 
+from build_job t0
+join build_monitor_config_build_job u1z_ on u1z_.build_job_id = t0.id 
+join build_monitor_config u1 on u1.id = u1z_.build_monitor_config_id  
+where u1.id = ?  
+order by display_order 
+
+]]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:82) [play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:63) [play_2.9.1.jar:2.0]
+	at akka.actor.Actor$class.apply(Actor.scala:290) [akka-actor.jar:2.0]
+	at play.core.ActionInvoker.apply(Invoker.scala:61) [play_2.9.1.jar:2.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:617) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:179) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:161) [akka-actor.jar:2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:505) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [akka-actor.jar:2.0]
+Caused by: javax.persistence.PersistenceException: Query threw SQLException:Order by expression "DISPLAY_ORDER" must be in the result list in this case; SQL statement:
+select distinct t0.id c0, t0.name c1, t0.url c2, t0.color c3, t0.build_number c4, t0.hidden c5, t0.highlight c6, t0.in_progress c7, t0.display_order c8 
+from build_job t0
+join build_monitor_config_build_job u1z_ on u1z_.build_job_id = t0.id 
+join build_monitor_config u1 on u1.id = u1z_.build_monitor_config_id  
+where u1.id = ?  
+order by display_order [90068-158] 
+Bind values:[null] 
+Query was:
+select distinct t0.id c0, t0.name c1, t0.url c2, t0.color c3, t0.build_number c4, t0.hidden c5, t0.highlight c6, t0.in_progress c7, t0.display_order c8 
+from build_job t0
+join build_monitor_config_build_job u1z_ on u1z_.build_job_id = t0.id 
+join build_monitor_config u1 on u1.id = u1z_.build_monitor_config_id  
+where u1.id = ?  
+order by display_order 
+
+
+	at com.avaje.ebeaninternal.server.query.CQuery.createPersistenceException(CQuery.java:849) ~[ebean.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQuery.createPersistenceException(CQuery.java:829) ~[ebean.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:238) ~[ebean.jar:na]
+	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:104) ~[ebean.jar:na]
+	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:344) ~[ebean.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1469) ~[ebean.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:906) ~[ebean.jar:na]
+	at models.BuildMonitorConfig.getJobs(BuildMonitorConfig.java:69) ~[classes/:na]
+	at views.html.edit$.apply(edit.template.scala:110) ~[classes/:na]
+	at views.html.edit$.render(edit.template.scala:120) ~[classes/:na]
+	at views.html.edit.render(edit.template.scala) ~[classes/:na]
+	at controllers.BuildMonitorController.edit(BuildMonitorController.java:103) ~[classes/:2.0]
+	at Routes$$anonfun$routes$1$$anonfun$apply$13$$anonfun$apply$14.apply(routes_routing.scala:128) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$apply$13$$anonfun$apply$14.apply(routes_routing.scala:128) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.invocation(Router.scala:1086) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:33) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.apply(Router.scala:1085) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:17) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:73) [play_2.9.1.jar:2.0]
+	... 11 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLException: Order by expression "DISPLAY_ORDER" must be in the result list in this case; SQL statement:
+select distinct t0.id c0, t0.name c1, t0.url c2, t0.color c3, t0.build_number c4, t0.hidden c5, t0.highlight c6, t0.in_progress c7, t0.display_order c8 
+from build_job t0
+join build_monitor_config_build_job u1z_ on u1z_.build_job_id = t0.id 
+join build_monitor_config u1 on u1.id = u1z_.build_monitor_config_id  
+where u1.id = ?  
+order by display_order [90068-158]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2.jar:1.3.158]
+	at org.h2.message.DbException.get(DbException.java:169) ~[h2.jar:1.3.158]
+	at org.h2.message.DbException.get(DbException.java:146) ~[h2.jar:1.3.158]
+	at org.h2.command.dml.Query.initOrder(Query.java:391) ~[h2.jar:1.3.158]
+	at org.h2.command.dml.Select.init(Select.java:709) ~[h2.jar:1.3.158]
+	at org.h2.command.Parser.parseSelect(Parser.java:1512) ~[h2.jar:1.3.158]
+	at org.h2.command.Parser.parsePrepared(Parser.java:405) ~[h2.jar:1.3.158]
+	at org.h2.command.Parser.parse(Parser.java:279) ~[h2.jar:1.3.158]
+	at org.h2.command.Parser.parse(Parser.java:251) ~[h2.jar:1.3.158]
+	at org.h2.command.Parser.prepareCommand(Parser.java:217) ~[h2.jar:1.3.158]
+	at org.h2.engine.Session.prepareLocal(Session.java:415) ~[h2.jar:1.3.158]
+	at org.h2.engine.Session.prepareCommand(Session.java:364) ~[h2.jar:1.3.158]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1119) ~[h2.jar:1.3.158]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:71) ~[h2.jar:1.3.158]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267) ~[h2.jar:1.3.158]
+	at com.jolbox.bonecp.ConnectionHandle.prepareStatement(ConnectionHandle.java:820) ~[bonecp.jar:0.7.1.RELEASE]
+	at com.avaje.ebeaninternal.server.query.CQuery.prepareBindExecuteQuery(CQuery.java:399) ~[ebean.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:198) ~[ebean.jar:na]
+	... 30 common frames omitted
+
+2012-05-14 15:26:35,731 - [INFO] - from play in play-akka.actor.default-dispatcher-43 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:26:35,944 - [INFO] - from play in play-akka.actor.default-dispatcher-43 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:26:37,884 - [INFO] - from play in play-akka.actor.default-dispatcher-43 
+Application started (Dev)
+
+2012-05-14 15:26:48,293 - [ERROR] - from application in play-akka.actor.actions-dispatcher-30 
+
+
+! @6ac087pec - Internal server error, for request [GET /edit/1] ->
+
+play.core.ActionInvoker$$anonfun$receive$1$$anon$1: Execution exception [[NullPointerException: null]]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:82) [play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:63) [play_2.9.1.jar:2.0]
+	at akka.actor.Actor$class.apply(Actor.scala:290) [akka-actor.jar:2.0]
+	at play.core.ActionInvoker.apply(Invoker.scala:61) [play_2.9.1.jar:2.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:617) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:179) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:161) [akka-actor.jar:2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:505) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [akka-actor.jar:2.0]
+Caused by: java.lang.NullPointerException: null
+	at models.BuildMonitorConfig.getJobs(BuildMonitorConfig.java:77) ~[classes/:na]
+	at views.html.edit$.apply(edit.template.scala:110) ~[classes/:na]
+	at views.html.edit$.render(edit.template.scala:120) ~[classes/:na]
+	at views.html.edit.render(edit.template.scala) ~[classes/:na]
+	at controllers.BuildMonitorController.edit(BuildMonitorController.java:103) ~[classes/:2.0]
+	at Routes$$anonfun$routes$1$$anonfun$apply$13$$anonfun$apply$14.apply(routes_routing.scala:128) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$apply$13$$anonfun$apply$14.apply(routes_routing.scala:128) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.invocation(Router.scala:1086) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:33) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.apply(Router.scala:1085) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:17) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:73) [play_2.9.1.jar:2.0]
+	... 11 common frames omitted
+
+2012-05-14 15:29:22,891 - [INFO] - from play in play-akka.actor.default-dispatcher-46 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:29:22,904 - [INFO] - from play in play-akka.actor.default-dispatcher-46 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:29:36,373 - [INFO] - from play in play-akka.actor.default-dispatcher-46 
+Application started (Dev)
+
+2012-05-14 15:32:40,333 - [INFO] - from play in play-akka.actor.default-dispatcher-47 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:32:40,347 - [INFO] - from play in play-akka.actor.default-dispatcher-47 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:32:42,048 - [INFO] - from play in play-akka.actor.default-dispatcher-47 
+Application started (Dev)
+
+2012-05-14 15:33:31,903 - [ERROR] - from application in play-akka.actor.actions-dispatcher-35 
+
+
+! @6ac087ped - Internal server error, for request [GET /edit/33] ->
+
+play.core.ActionInvoker$$anonfun$receive$1$$anon$1: Execution exception [[NullPointerException: null]]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:82) [play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:63) [play_2.9.1.jar:2.0]
+	at akka.actor.Actor$class.apply(Actor.scala:290) [akka-actor.jar:2.0]
+	at play.core.ActionInvoker.apply(Invoker.scala:61) [play_2.9.1.jar:2.0]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:617) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:179) [akka-actor.jar:2.0]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:161) [akka-actor.jar:2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:505) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinTask.doExec(ForkJoinTask.java:259) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:997) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) [akka-actor.jar:2.0]
+	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [akka-actor.jar:2.0]
+Caused by: java.lang.NullPointerException: null
+	at models.BuildMonitorConfig.getJobs(BuildMonitorConfig.java:77) ~[classes/:na]
+	at views.html.edit$.apply(edit.template.scala:110) ~[classes/:na]
+	at views.html.edit$.render(edit.template.scala:120) ~[classes/:na]
+	at views.html.edit.render(edit.template.scala) ~[classes/:na]
+	at controllers.BuildMonitorController.edit(BuildMonitorController.java:103) ~[classes/:2.0]
+	at Routes$$anonfun$routes$1$$anonfun$apply$13$$anonfun$apply$14.apply(routes_routing.scala:128) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$apply$13$$anonfun$apply$14.apply(routes_routing.scala:128) ~[classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.invocation(Router.scala:1086) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:33) ~[play_2.9.1.jar:2.0]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.Router$HandlerInvoker$$anon$4$$anon$1.apply(Router.scala:1085) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1$$anonfun$4.apply(Invoker.scala:74) ~[play_2.9.1.jar:2.0]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:17) ~[play_2.9.1.jar:2.0]
+	at play.core.ActionInvoker$$anonfun$receive$1.apply(Invoker.scala:73) [play_2.9.1.jar:2.0]
+	... 11 common frames omitted
+
+2012-05-14 15:37:13,472 - [INFO] - from play in play-akka.actor.default-dispatcher-53 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:37:14,094 - [INFO] - from play in play-akka.actor.default-dispatcher-53 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:37:15,680 - [INFO] - from play in play-akka.actor.default-dispatcher-53 
+Application started (Dev)
+
+2012-05-14 15:38:58,579 - [INFO] - from play in play-akka.actor.default-dispatcher-58 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:38:58,582 - [INFO] - from play in play-akka.actor.default-dispatcher-58 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:38:59,771 - [INFO] - from play in play-akka.actor.default-dispatcher-58 
+Application started (Dev)
+
+2012-05-14 15:41:01,549 - [INFO] - from play in play-akka.actor.default-dispatcher-61 
+datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
+
+2012-05-14 15:41:01,569 - [INFO] - from play in play-akka.actor.default-dispatcher-61 
+database [default] connected at jdbc:h2:mem:play
+
+2012-05-14 15:41:02,873 - [INFO] - from play in play-akka.actor.default-dispatcher-61 
 Application started (Dev)
 

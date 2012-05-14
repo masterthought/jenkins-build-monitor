@@ -24,6 +24,20 @@ create table build_monitor_config (
   constraint pk_build_monitor_config primary key (id))
 ;
 
+create table global_config (
+  id                        bigint not null,
+  refresh_rate_in_seconds   integer,
+  sounds_activated          boolean,
+  path_to_sounds            varchar(255),
+  play_sound_on_failure     boolean,
+  play_sound_on_success     boolean,
+  play_sound_on_unstable    boolean,
+  display_avatars           boolean,
+  display_latest_successful boolean,
+  description               varchar(255),
+  constraint pk_global_config primary key (id))
+;
+
 
 create table build_monitor_config_build_job (
   build_monitor_config_id        bigint not null,
@@ -33,6 +47,8 @@ create table build_monitor_config_build_job (
 create sequence build_job_seq;
 
 create sequence build_monitor_config_seq;
+
+create sequence global_config_seq;
 
 
 
@@ -51,9 +67,13 @@ drop table if exists build_monitor_config_build_job;
 
 drop table if exists build_monitor_config;
 
+drop table if exists global_config;
+
 SET REFERENTIAL_INTEGRITY TRUE;
 
 drop sequence if exists build_job_seq;
 
 drop sequence if exists build_monitor_config_seq;
+
+drop sequence if exists global_config_seq;
 

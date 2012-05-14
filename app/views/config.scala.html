@@ -46,9 +46,9 @@
 
     $(document).ready(function(){
 				//Examples of how to assign the ColorBox event to elements
-				$(".inline").colorbox({inline:true, width:"50%"});
-                $(".delete").colorbox({inline:true, width:"50%"});
-        $(".edit").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({ inline:true, width:"50%", onClosed:function() { location.reload(true);}});
+                $(".delete").colorbox({inline:true, width:"50%", onClosed:function() { location.reload(true);}});
+                $(".edit").colorbox({iframe:true, width:"80%", height:"80%", onClosed:function() { location.reload(true);}});
 				$("#click").click(function(){
 					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
 					return false;
@@ -142,11 +142,15 @@
 		<!--<hr/>-->
 		<h3>Jenkins Configurations</h3>
 		<ul class="toggle">
-			<li class="icn_new_article"><a class='inline' href="#inline_content">New Config</a></li>
+			<li class="icn_new_article"><a class='inline' href="#inline_content">New Build Monitor</a></li>
 		</ul>
 		<h3>Media</h3>
 		<ul class="toggle">
 			<li class="icn_audio"><a href="/audio">Audio</a></li>
+		</ul>
+        <h3>Settings</h3>
+		<ul class="toggle">
+			<li class="icn_settings"><a href="/settings">Settings</a></li>
 		</ul>
 		
 		<footer>

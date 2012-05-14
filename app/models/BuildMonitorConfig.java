@@ -5,6 +5,8 @@ import BuildJobUtils.JsonResolver;
 import play.db.ebean.Model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import javax.persistence.*;
 
@@ -61,6 +63,31 @@ public class BuildMonitorConfig extends Model {
         }
         return null;
     }
+
+    public List<BuildJob> getJobs(){
+
+       List<BuildJob> jobsList = BuildJob.find.where().eq("buildMonitorConfig", this).orderBy("displayOrder asc").findList();
+       return jobsList;
+
+//        int availableJobsCount = this.jobs.size();
+//        if(availableJobsCount != 0 ){
+//            BuildJob[] orderedJobs = new BuildJob[availableJobsCount];
+//            int i = 0;
+//            for(BuildJob job : orderedJobs){
+//               if(job.displayOrder == i){
+//                    orderedJobs[i] = job;
+//               }
+//               i++;
+//            }
+//            return Arrays.asList(orderedJobs);
+//        }
+//        return new ArrayList<BuildJob>();
+
+
+    }
+
+
+
 
 
 

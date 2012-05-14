@@ -18,14 +18,14 @@
        <strong>There are no jobs found</strong>
     }
     @if(!config.jobs.isEmpty()) {
-            @for(job <- config.jobs){
+            @for(job <- config.getJobs()){
                 <div class="grid_12 job @job.color @if(job.hidden){
                  hidden
                  }">
                    <strong><a class="@if(job.highlight){highlighted} else {title}" href="@job.url" >@job.getName()</a>
                           - Build: <a href="@job.getLatestBuildUrl()">#@job.buildNumber</a>
                 @if(job.inProgress){
-                   <!--img src="@routes.Assets.at("images/progress.gif")" /-->
+                   <img src="@routes.Assets.at("images/loading.gif")" />
                             <i>BUILD IN PROGRESS</i>
                 }
                     </strong>

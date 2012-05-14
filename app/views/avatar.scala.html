@@ -1,0 +1,7 @@
+@import helper._
+@form(action = routes.BuildMonitorController.upload, 'enctype -> "multipart/form-data") {
+    <input type="file" name="picture">
+    <p>
+        <input type="submit">
+    </p>
+}

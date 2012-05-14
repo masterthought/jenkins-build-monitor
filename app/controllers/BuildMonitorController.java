@@ -1,18 +1,20 @@
 package controllers;
 
-import BuildJobUtils.*;
-import BuildJobUtils.BuildJob;
-import com.sun.xml.internal.bind.v2.runtime.ElementBeanInfoImpl;
-import models.*;
+import BuildJobUtils.BuildMonitorJob;
+import BuildJobUtils.JsonResolver;
+import models.BuildMonitorConfig;
 import play.*;
 import play.data.Form;
-import play.mvc.*;
-import com.avaje.ebean.Ebean;
 import play.db.ebean.Transactional;
+import play.mvc.*;
+import play.mvc.Http.MultipartFormData;
+import play.mvc.Http.MultipartFormData.FilePart;
 
-import java.text.Normalizer;
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.StringTokenizer;
 
 public class BuildMonitorController extends Controller {
 
@@ -31,6 +33,46 @@ public class BuildMonitorController extends Controller {
         BuildMonitorConfig config = configForm.bindFromRequest().get();
         config.save();
         return redirect("/config");
+    }
+
+    public static Result avatar() {
+       return ok(views.html.avatar.render());
+    }
+
+    public static Result upload() {
+          MultipartFormData body = request().body().asMultipartFormData();
+          FilePart picture = body.getFile("picture");
+          if (picture != null) {
+            String fileName = picture.getFilename();
+            String contentType = picture.getContentType();
+            File file = picture.getFile();
+            return ok("File uploaded");
+          } else {
+            flash("error", "Missing file");
+            return redirect(routes.BuildMonitorController.config());
+          }
+    }
+
+    public static Result updateOrder(Long id, String order){
+       BuildMonitorConfig config = BuildMonitorConfig.find.byId(id);
+        System.out.println("Received a request to update order for: "  + id + " order: " + order);
+        String[] jobNames = order.split(",");
+        List<String> listOfNames = Arrays.asList(jobNames);
+        int i = 0;
+        for(String jobName : listOfNames ){
+            jobName = jobName.replaceAll("%20"," ").trim();
+            System.out.print("JobName: " + jobName);
+            System.out.println(" with index: " + i );
+            models.BuildJob existingJob = BuildMonitorConfig.containsJob(config, jobName);
+            System.out.println("Existing job found with name: " + existingJob.name);
+            existingJob.displayOrder = i;
+            existingJob.update();
+            config.update();
+            config.refresh();
+            i++;
+        }
+
+        return ok(id + " order " + order + " is updated");
     }
 
     public static Result display(Long id) {
@@ -162,6 +204,7 @@ public class BuildMonitorController extends Controller {
                                    job.id = existingJob.id;
                                    job.hidden = existingJob.hidden;
                                    job.highlight = existingJob.highlight;
+                                   job.displayOrder = existingJob.displayOrder;
                                    existingJob = job;
                                    System.out.println
                                            ("For " + existingJob.name + " hidden is:" + existingJob.hidden +
@@ -182,11 +225,7 @@ public class BuildMonitorController extends Controller {
                                        //job.saveManyToManyAssociations("buildMonitorConfig");
 
                                }
-
-
-
-
-                            }
+                        }
 
                          //config.jobs.addAll(listOfJobs);
                          config.update();
