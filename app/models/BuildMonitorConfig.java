@@ -65,31 +65,7 @@ public class BuildMonitorConfig extends Model {
     }
 
     public List<BuildJob> getJobs(){
-
        List<BuildJob> jobsList = BuildJob.find.where().eq("buildMonitorConfig", this).orderBy("displayOrder asc").findList();
        return jobsList;
-
-//        int availableJobsCount = this.jobs.size();
-//        if(availableJobsCount != 0 ){
-//            BuildJob[] orderedJobs = new BuildJob[availableJobsCount];
-//            int i = 0;
-//            for(BuildJob job : orderedJobs){
-//               if(job.displayOrder == i){
-//                    orderedJobs[i] = job;
-//               }
-//               i++;
-//            }
-//            return Arrays.asList(orderedJobs);
-//        }
-//        return new ArrayList<BuildJob>();
-
-
     }
-
-
-
-
-
-
-
 }

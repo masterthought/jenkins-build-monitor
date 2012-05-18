@@ -1,40 +1,51 @@
 package Utils;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+import com.meterware.httpunit.WebConversation;
+import com.meterware.httpunit.WebResponse;
+import javazoom.jl.player.Player;
+
+import java.io.BufferedInputStream;
 
 public class AudioPlayer {
+    private Player player;
 
-    /*
-       1. Create mapping between events and audio
-       2. Find static audio wav files which can be used
-       3. In Job model add a boolean which will indicate whether the build was building previously and if it is still broken
-          This one should be updated when we refresh the jobs on jobdisplay().
-       4. Add the ability to mute/unmute all the sounds
-       5. Add ordering
-       6. Add config for users + map it to their avatar. If broken show last user who checked-in.
-       --> Ability to upload avatars.
-       7. Make refresh rate configurable
-     */
+    public void close() {
+        if (player != null) player.close();
+    }
 
-    public static final String FAILURE_SOUND = "failure.wav";
-    public static final String FIXED_SOUND = "fixed.wav";
-    public static final String UNSTABLE_SOUND = "unstable.wav";
+    public void play(String s) {
+        try {
+            WebConversation webConversation = new WebConversation();
+            WebResponse webResponse = webConversation.getResponse("http://translate.google.com/translate_tts?q=" + s);
+            BufferedInputStream bis = new BufferedInputStream(webResponse.getInputStream());
+            player = new Player(bis);
 
-    public static synchronized void playSound(final String url) {
-        new Thread(new Runnable() { // the wrapper thread is unnecessary, unless it blocks on the Clip finishing, see comments
-          public void run() {
-            try {
-              Clip clip = AudioSystem.getClip();
-              AudioInputStream inputStream = AudioSystem.getAudioInputStream(AudioPlayer.class.getResourceAsStream("/path/to/sounds/" + url));
-              clip.open(inputStream);
-              clip.start();
-            } catch (Exception e) {
-              System.err.println(e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        new Thread() {
+            public void run() {
+                try {
+                    player.play();
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
             }
-          }
-        }).start();
+        }.start();
+    }
+
+    public static void main(String[] args) {
+        AudioPlayer mp3 = new AudioPlayer();
+        mp3.close();
+        mp3 = new AudioPlayer();
+        mp3.play("hello there!");
+    }
+
+     public static void speak(String s) throws Exception {
+        AudioPlayer mp3 = new AudioPlayer();
+        mp3.close();
+        mp3 = new AudioPlayer();
+        mp3.play(s);
     }
 }
 

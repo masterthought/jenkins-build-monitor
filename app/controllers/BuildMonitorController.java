@@ -2,6 +2,7 @@ package controllers;
 
 import BuildJobUtils.BuildMonitorJob;
 import BuildJobUtils.JsonResolver;
+import Utils.AudioPlayer;
 import models.BuildMonitorConfig;
 import play.*;
 import play.data.Form;
@@ -184,7 +185,6 @@ public class BuildMonitorController extends Controller {
                     buildJobs = JsonResolver.getAvailableBuildJobs(config.buildUrl);
                     System.out.println(buildJobs.size() + " found!");
 
-                        List<models.BuildJob> listOfJobs = new ArrayList<models.BuildJob>();
                         for (BuildJobUtils.BuildJob buildJob : buildJobs) {
                             BuildMonitorJob monitorJob = new BuildMonitorJob(buildJob);
                                models.BuildJob job = new models.BuildJob();
@@ -196,34 +196,25 @@ public class BuildMonitorController extends Controller {
                                job.displayOrder = buildJobs.indexOf(buildJob);
                                job.buildNumber = monitorJob.getLatestBuildNumber();
                                job.inProgress = monitorJob.inProgress();
-                               System.out.println("Before an update");
 
                                models.BuildJob existingJob = BuildMonitorConfig.containsJob(config,job.name);
                                if(existingJob != null) {
-                                   System.out.println("The job is already related to the config: " + config.name);
+                                   if(existingJob.inProgress && !monitorJob.inProgress()){
+                                       if(job.color.equalsIgnoreCase("red")) AudioPlayer.speak("Build " + job.buildNumber + " of " + job.name + " just failed.");
+                                   }
                                    job.id = existingJob.id;
                                    job.hidden = existingJob.hidden;
                                    job.highlight = existingJob.highlight;
                                    job.displayOrder = existingJob.displayOrder;
                                    existingJob = job;
-                                   System.out.println
-                                           ("For " + existingJob.name + " hidden is:" + existingJob.hidden +
-                                             " and highlight is:" +  existingJob.highlight
-                                            );
                                    job.update();
                                    config.update();
                                    config.refresh();
                                } else{
                                    job.save();
-                                   System.out.println("The job isn't related to the config: " + config.name);
                                    config.jobs.add(job);
                                    config.saveManyToManyAssociations("jobs");
                                    config.update();
-
-    //job.buildMonitorConfig.add(config);
-                                       //job.update();
-                                       //job.saveManyToManyAssociations("buildMonitorConfig");
-
                                }
                         }
 

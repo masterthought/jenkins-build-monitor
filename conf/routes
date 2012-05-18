@@ -3,19 +3,19 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.BuildMonitorController.index()
-GET     /new                        controllers.BuildMonitorController.newmonitor()
-GET     /create                     controllers.BuildMonitorController.create()
-GET     /display/:id                controllers.BuildMonitorController.display(id: Long)
-GET     /jobsDisplay/:id            controllers.BuildMonitorController.jobDisplay(id: Long)
-GET     /delete/:id                 controllers.BuildMonitorController.delete(id: Long)
-GET     /edit/:id                   controllers.BuildMonitorController.edit(id: Long)
-GET     /update/:id                 controllers.BuildMonitorController.update(id: Long)
-GET     /updateJob/:id              controllers.BuildMonitorController.updateJob(id: Long)
-GET     /config                     controllers.BuildMonitorController.config()
-GET     /upload                     controllers.BuildMonitorController.upload()
-GET     /avatar                     controllers.BuildMonitorController.avatar()
-GET    /update_order/:id/:order           controllers.BuildMonitorController.updateOrder(id: Long, order: String)
+GET     /                                 controllers.BuildMonitorController.index()
+GET     /new                              controllers.BuildMonitorController.newmonitor()
+GET     /create                           controllers.BuildMonitorController.create()
+GET     /display/:id                      controllers.BuildMonitorController.display(id: Long)
+GET     /jobsDisplay/:id                  controllers.BuildMonitorController.jobDisplay(id: Long)
+GET     /delete/:id                       controllers.BuildMonitorController.delete(id: Long)
+GET     /edit/:id                         controllers.BuildMonitorController.edit(id: Long)
+GET     /update/:id                       controllers.BuildMonitorController.update(id: Long)
+GET     /updateJob/:id                    controllers.BuildMonitorController.updateJob(id: Long)
+GET     /config                           controllers.BuildMonitorController.config()
+GET     /upload                           controllers.BuildMonitorController.upload()
+GET     /avatar                           controllers.BuildMonitorController.avatar()
+GET     /update_order/:id/:order          controllers.BuildMonitorController.updateOrder(id: Long, order: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

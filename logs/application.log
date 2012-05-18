@@ -1,16 +1,16 @@
-2012-05-14 16:50:47,117 - [INFO] - from play in main 
+2012-05-18 16:27:51,935 - [INFO] - from play in main 
 Listening for HTTP on port 9000...
 
-2012-05-14 16:51:30,456 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
+2012-05-18 16:28:18,583 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2012-05-14 16:51:31,070 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
+2012-05-18 16:28:18,802 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
 database [default] connected at jdbc:h2:mem:play
 
-2012-05-14 16:51:33,082 - [ERROR] - from application in New I/O server worker #1-1 
+2012-05-18 16:28:20,473 - [ERROR] - from application in New I/O server worker #1-1 
 
 
-! @6ac1ohp0o - Internal server error, for request [GET /] ->
+! @6ad4np22m - Internal server error, for request [GET /] ->
 
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution! [An SQL script need to be run on your database.]
 	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:424) ~[play_2.9.1.jar:2.0]
@@ -40,10 +40,10 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at akka.jsr166y.ForkJoinPool.runWorker(ForkJoinPool.java:1495) ~[akka-actor.jar:2.0]
 	at akka.jsr166y.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) ~[akka-actor.jar:2.0]
 
-2012-05-14 16:51:35,415 - [INFO] - from play in New I/O server worker #1-1 
+2012-05-18 16:28:22,626 - [INFO] - from play in New I/O server worker #1-1 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2012-05-14 16:51:35,429 - [WARN] - from play in New I/O server worker #1-1 
+2012-05-18 16:28:22,649 - [WARN] - from play in New I/O server worker #1-1 
 Applying evolution script for database 'default':
 
 # --- Rev:1,Ups - 03fd4e1
@@ -102,21 +102,21 @@ alter table build_monitor_config_build_job add constraint fk_build_monitor_confi
 alter table build_monitor_config_build_job add constraint fk_build_monitor_config_build_02 foreign key (build_job_id) references build_job (id) on delete restrict on update restrict;
 
 
-2012-05-14 16:51:36,181 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
+2012-05-18 16:28:23,349 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2012-05-14 16:51:36,183 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
+2012-05-18 16:28:23,351 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
 database [default] connected at jdbc:h2:mem:play
 
-2012-05-14 16:51:36,890 - [INFO] - from play in play-akka.actor.default-dispatcher-1 
+2012-05-18 16:28:24,008 - [INFO] - from play in play-akka.actor.default-dispatcher-3 
 Application started (Dev)
 
-2012-05-14 16:54:51,068 - [INFO] - from play in play-akka.actor.default-dispatcher-9 
+2012-05-18 16:29:16,014 - [INFO] - from play in play-akka.actor.default-dispatcher-4 
 datasource [jdbc:h2:mem:play] bound to JNDI as DefaultDS
 
-2012-05-14 16:54:51,072 - [INFO] - from play in play-akka.actor.default-dispatcher-9 
+2012-05-18 16:29:16,017 - [INFO] - from play in play-akka.actor.default-dispatcher-4 
 database [default] connected at jdbc:h2:mem:play
 
-2012-05-14 16:54:51,714 - [INFO] - from play in play-akka.actor.default-dispatcher-9 
+2012-05-18 16:29:16,718 - [INFO] - from play in play-akka.actor.default-dispatcher-4 
 Application started (Dev)
 

@@ -8,7 +8,15 @@ public class BuildMonitorJob {
     private boolean active = false;
     private BuildJob buildJob;
 
+    public BuildMonitorJob() {} ;
+
     public BuildMonitorJob(BuildJob buildJob){
+        this.buildJob = buildJob;
+        this.active = true;
+        setVerbose();
+    }
+
+    public void setBuildJob(BuildJob buildJob){
         this.buildJob = buildJob;
         this.active = true;
         setVerbose();
