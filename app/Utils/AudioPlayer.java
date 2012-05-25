@@ -46,6 +46,7 @@ public class AudioPlayer {
         mp3.close();
         mp3 = new AudioPlayer();
         mp3.play(s);
+        System.out.println(s);
     }
 }
 

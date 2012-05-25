@@ -15,7 +15,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.StringTokenizer;
 
 public class BuildMonitorController extends Controller {
 
@@ -167,6 +166,8 @@ public class BuildMonitorController extends Controller {
 
     }
 
+    private static List<String> thingsToSay = new ArrayList<String>();
+
     @Transactional
     public static Result jobDisplay(Long id){
 
@@ -184,7 +185,7 @@ public class BuildMonitorController extends Controller {
                 try {
                     buildJobs = JsonResolver.getAvailableBuildJobs(config.buildUrl);
                     System.out.println(buildJobs.size() + " found!");
-
+                         thingsToSay.clear();
                         for (BuildJobUtils.BuildJob buildJob : buildJobs) {
                             BuildMonitorJob monitorJob = new BuildMonitorJob(buildJob);
                                models.BuildJob job = new models.BuildJob();
@@ -200,7 +201,10 @@ public class BuildMonitorController extends Controller {
                                models.BuildJob existingJob = BuildMonitorConfig.containsJob(config,job.name);
                                if(existingJob != null) {
                                    if(existingJob.inProgress && !monitorJob.inProgress()){
-                                       if(job.color.equalsIgnoreCase("red")) AudioPlayer.speak("Build " + job.buildNumber + " of " + job.name + " just failed.");
+                                       if(job.color.equalsIgnoreCase("red")) {
+                                           thingsToSay.add("Build " + job.buildNumber + " of " + job.name + " project just failed.");
+
+                                       }
                                    }
                                    job.id = existingJob.id;
                                    job.hidden = existingJob.hidden;
@@ -221,6 +225,13 @@ public class BuildMonitorController extends Controller {
                          //config.jobs.addAll(listOfJobs);
                          config.update();
                          config.refresh();
+
+                         if(!thingsToSay.isEmpty()){
+                             for(String thingToSay : thingsToSay){
+                                 AudioPlayer.speak(thingToSay);
+                                 Thread.sleep(1000);
+                             }
+                         }
 
                 } catch (Exception e) {
                      e.printStackTrace();
